@@ -88,6 +88,7 @@ Today: Calcite, ArcGIS Maps SDK for JavaScript, bundlers, and frameworks.
 - Identify Calcite navigation, panels, and statistics chips in the app.
 - Highlight reusable UI and design guidance.
 - Consider accessibility when composing the application.
+- Switch to the online Calcite documentation: https://developers.arcgis.com/calcite-design-system/ (next slide).
 -->
 
 ---
@@ -123,11 +124,14 @@ url: https://developers.arcgis.com/calcite-design-system/
 - Components: packaged mapping functionality.
 - Core API: custom application logic.
 - Documentation: guidance connecting both approaches.
+- Switch to the online SDK documentation: https://developers.arcgis.com/javascript/latest/; then return to the slides.
 -->
 
 ---
 
 # How to get the SDK into your app
+
+<v-clicks :at="0">
 
 - Include the ArcGIS CDN in script tag applications for prototyping and getting
   started quickly
@@ -136,15 +140,25 @@ url: https://developers.arcgis.com/calcite-design-system/
   - Syntax for including modules:
     - `const WebMap = await $arcgis.import("@arcgis/core/WebMap.js");`
 - Add the SDK as a dependency when building applications that scale
+  (npm packages: `@arcgis/core`, `@arcgis/map-components`,
+  `@esri/calcite-components`)
   - JavaScript runtime environment and package manager required
   - Work with a bundler (Vite, Parcel, Webpack) and framework (React, Angular,
     Vue)
   - Syntax for including modules:
     - `import WebMap from "@arcgis/core/WebMap.js";`
 
+</v-clicks>
+
 <!--
-- CDN: quick starting point.
-- npm: imports and dependencies in a source project.
+- Start with the CDN approach visible. Click once to reveal the npm approach and its nested points.
+- Connect to the first session: start from the same component-based HTML app and its CDN loading approach.
+- The CDN supplies hosted SDK files directly to the browser.
+- npm is the package manager: it downloads packages into node_modules and records dependencies in package.json and package-lock.json.
+- Name the packages: @arcgis/core for the core API, @arcgis/map-components for mapping components, and @esri/calcite-components for the surrounding UI.
+- Vite resolves imports from those installed packages and prepares the browser app.
+- Map components are installed from @arcgis/map-components and imported by the application.
+- For these existing demos, use npm ci to reproduce the locked versions.
 - Frameworks are optional; the first Vite demo uses plain JavaScript.
 -->
 
@@ -160,13 +174,15 @@ url: https://developers.arcgis.com/javascript/latest/system-requirements/
   - Node.js
 - And a package manager
   - NPM (comes with Node.js)
+  - pnpm (alternative package manager)
 - For more information, see the SDK's
   [system requirements](https://developers.arcgis.com/javascript/latest/system-requirements/)
   documentation
 
 <!--
 - Browser: runs the application.
-- Node and npm: run development tools.
+- Node and a package manager such as npm or pnpm: run development tools.
+- These demos use npm and package-lock.json; keep using npm ci to reproduce their dependencies.
 - Check SDK requirements and repository setup instructions.
 -->
 
@@ -273,7 +289,8 @@ graph LR
 3. Permits consumption of NPM packages
 4. Make testing code simpler
 
-Bonus: can extend the bundlers using plugins
+Bonus: can extend the bundlers using plugins (React support, SVG imports,
+bundle analysis)
 
 <!--
 - Show saved changes appearing in the browser.
@@ -476,6 +493,7 @@ layout: intro
   we write applications
 - React, Angular, and Vue are widely used options
 - Web components work in most major frameworks because they are standards-based
+- Start with the [application templates](https://github.com/Esri/jsapi-resources/tree/main/templates) or run `npm init @arcgis`
 
 <!--
 - Frameworks provide shared application patterns.
@@ -492,6 +510,7 @@ layout: intro
 - Top down data flow
 - Declarative rendering and events
   - JSX syntax, which is a mix of JavaScript and HTML
+  - TSX: JSX in TypeScript files (`.tsx`)
 - Easy state management with "hooks"
 - Components re-render when state changes, so no need for query selectors or
   manual DOM manipulation
