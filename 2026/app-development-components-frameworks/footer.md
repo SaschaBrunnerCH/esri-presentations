@@ -2,6 +2,10 @@
 is: feedback
 ---
 
+<!--
+- Invite attendees to complete the session survey.
+-->
+
 ---
 is: social
 ---
@@ -62,6 +66,15 @@ Join the Conversation using #EUDevTech2026
   </li>
 </ul>
 
+<!--
+- Point to developer resources, recordings, examples, and community channels.
+-->
+
 ---
 is: esri
 ---
+
+<!--
+- Thank the audience.
+- Return to the Questions slide for discussion.
+-->

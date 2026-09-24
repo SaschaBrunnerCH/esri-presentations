@@ -11,9 +11,18 @@ layout: cover
 
 Stefan Schläfli · Sascha Brunner
 
+<!--
+- One app, five stages: HTML → Vite → React → TypeScript → extracted component.
+- Explain what each stage improves for the developer.
+-->
+
 ---
 is: feedback
 ---
+
+<!--
+- Invite feedback through the session survey.
+-->
 
 ---
 
@@ -32,6 +41,11 @@ Harmonie Hall A–C, Level C2 · Congress Center
 
 First in the four-part series. This session builds on those foundations.
 
+<!--
+- Build on the earlier component programming patterns session.
+- Baseline: connected map, table, search, and elevation profile.
+-->
+
 ---
 
 # Today's session
@@ -46,6 +60,12 @@ Second of four sessions · Wednesday, 21 October · All times CEST
 | 14:30–15:30     | [Extending and Styling](https://registration.esri.com/flow/esri/26euroepcdev/deveventportal/page/detailed-agenda/session/1785495003196001fwKB)               |
 
 Today: Calcite, ArcGIS Maps SDK for JavaScript, bundlers, and frameworks.
+
+<!--
+- Locate this talk in the four-session conference series.
+- Our progression: HTML → Vite → React → TypeScript → encapsulation.
+- Point to this afternoon for deeper UX and styling coverage.
+-->
 
 ---
 
@@ -64,11 +84,23 @@ Today: Calcite, ArcGIS Maps SDK for JavaScript, bundlers, and frameworks.
 
 ![Calcite components](./assets/calcite.png){ width=250 }
 
+<!--
+- Identify Calcite navigation, panels, and statistics chips in the app.
+- Highlight reusable UI and design guidance.
+- Consider accessibility when composing the application.
+-->
+
 ---
 layout: iframe
 
 url: https://developers.arcgis.com/calcite-design-system/
 ---
+
+<!--
+- Open a component reference.
+- Point out properties, slots, and styling guidance.
+- Keep the tour focused on where to find answers.
+-->
 
 ---
 
@@ -87,6 +119,12 @@ url: https://developers.arcgis.com/calcite-design-system/
   - **Documentation** - Includes docs for getting started, programming patterns,
     tutorials, application templates, sample code, and references.
 
+<!--
+- Components: packaged mapping functionality.
+- Core API: custom application logic.
+- Documentation: guidance connecting both approaches.
+-->
+
 ---
 
 # How to get the SDK into your app
@@ -104,6 +142,12 @@ url: https://developers.arcgis.com/calcite-design-system/
   - Syntax for including modules:
     - `import WebMap from "@arcgis/core/WebMap.js";`
 
+<!--
+- CDN: quick starting point.
+- npm: imports and dependencies in a source project.
+- Frameworks are optional; the first Vite demo uses plain JavaScript.
+-->
+
 ---
 layout: iframe-right
 url: https://developers.arcgis.com/javascript/latest/system-requirements/
@@ -120,6 +164,12 @@ url: https://developers.arcgis.com/javascript/latest/system-requirements/
   [system requirements](https://developers.arcgis.com/javascript/latest/system-requirements/)
   documentation
 
+<!--
+- Browser: runs the application.
+- Node and npm: run development tools.
+- Check SDK requirements and repository setup instructions.
+-->
+
 ---
 
 # Scaffold a new app using a single command
@@ -134,10 +184,21 @@ url: https://developers.arcgis.com/javascript/latest/system-requirements/
     app templates from the
     [Esri/jsapi-resources](https://github.com/Esri/jsapi-resources) repository
 
+<!--
+- Scaffold command: starting project.
+- Existing app: follow manual setup guidance.
+- Inspect templates in `jsapi-resources`.
+-->
+
 ---
 layout: iframe
 url: https://developers.arcgis.com/javascript/latest/get-started/
 ---
+
+<!--
+- Locate npm setup and framework guidance.
+- Preview the component type references used later in the React + TypeScript demo.
+-->
 
 ---
 
@@ -149,11 +210,23 @@ Use the ArcGIS CDN to load components without a build step.
 
 Demo source: `demo/0-vanilla`
 
+<!--
+1. Open `demo/0-vanilla`; select a trail.
+2. Show the connected map, table, popup, and elevation profile.
+3. Open `index.html`: CDN entry and component markup.
+4. Point to `main.js` for application behavior.
+-->
+
 ---
 layout: intro
 ---
 
 # Using Bundlers
+
+<!--
+- Start from the working baseline app.
+- Introduce the development and packaging workflow a bundler adds.
+-->
 
 ---
 
@@ -186,6 +259,11 @@ graph LR
   human_files ==> Bundler ==> optimized_output
 ```
 
+<!--
+- Follow the diagram: source files + dependencies → tooling → browser output.
+- Explain that optimization depends on the tooling and configuration.
+-->
+
 ---
 
 # Bundler benefits
@@ -197,6 +275,13 @@ graph LR
 
 Bonus: can extend the bundlers using plugins
 
+<!--
+- Show saved changes appearing in the browser.
+- Introduce the production build command.
+- Mention dependencies and plugins.
+- Bundling alone does not provide tests.
+-->
+
 ---
 
 # Examples of bundlers
@@ -207,6 +292,11 @@ Bonus: can extend the bundlers using plugins
   - Used by many Esri teams
   - Great developer experience
   - Large and rapidly growing community
+
+<!--
+- Use Vite as the concrete example.
+- Focus on its development workflow.
+-->
 
 ---
 layout: center
@@ -223,12 +313,12 @@ npm run dev
 ```
 
 <!--
-- Describe converting index.html app to Vite
-  - use jsapi-resources starter app
-- Start the dev server and show how simple it is to use
-- Show index.html, main.js
-- Show live update
-- Ctrl + Cmd + Space for emoji picker
+1. Open `demo/1-javascript`.
+2. Show `package.json`: scripts and dependencies.
+3. Trace `index.html` → `src/main.js` → component imports.
+4. Change the navigation heading; save and show the browser update.
+5. Undo the edit.
+6. Recap: same mapping components and application purpose.
 -->
 
 ---
@@ -238,6 +328,12 @@ npm run dev
 - Your application can consume other packages
 - Use [npmjs.com](https://www.npmjs.com/) to find packages or find out the
   latest version number
+
+<!--
+- Dependencies supply application functionality or development tooling.
+- Manifest: what the project needs.
+- Documentation and release notes: what packages provide and what changes.
+-->
 
 ---
 
@@ -264,6 +360,13 @@ package.json:
   }
 ```
 
+<!--
+- Runtime: SDK, Calcite, and React.
+- Development/build: Vite, React plugin, TypeScript, and type definitions.
+- Manifest: version ranges.
+- Lockfile: resolved versions.
+-->
+
 ---
 
 # Semantic versioning
@@ -277,6 +380,12 @@ Example: `5.1.25` → major **5**, minor **1**, patch **25**
 - **patch**: backward-compatible fixes
 
 Compatibility is the specification’s promise; verify updates with builds and tests.
+
+<!--
+- Explain major, minor, and patch.
+- Describe intended compatibility.
+- Verify updates with release notes, builds, and application checks.
+-->
 
 ---
 
@@ -293,6 +402,13 @@ Commit `package-lock.json` to record the resolved dependency versions.
 
 Use `npm ci` to install those versions reproducibly.
 
+<!--
+- Tilde in this example: patch updates.
+- Caret in this example: minor and patch updates within the major version.
+- `npm ci`: install the locked dependency tree.
+- Requires agreement between the lockfile and `package.json`.
+-->
+
 ---
 
 # Publishing
@@ -303,10 +419,10 @@ Use `npm ci` to install those versions reproducibly.
    - or local server (NGINX, Microsoft IIS, Apache)
 
 <!--
-- The output is index.html and static files - same as no-build-step apps
-  - Show the generated JavaScript chunks and assets
-- Can be deployed to any hosting provider (GitHub Pages, Vercel) or local server (NGINX, Microsoft IIS, Apache)
-- Preview using `npm run preview`
+1. Run `npm run build` in `demo/1-javascript`.
+2. Inspect `dist/index.html` and generated assets/chunks.
+3. Explain deployment to static hosting.
+4. Use `npm run preview` to inspect the built app locally.
 -->
 
 ---
@@ -321,6 +437,12 @@ Use `npm ci` to install those versions reproducibly.
 
 <img src="./assets/cdn-network-5.1.png" alt="Captured requests from the local ArcGIS 5.1 demo to SDK assets on js.arcgis.com" style="max-height: 245px; width: 100%; object-fit: contain; margin-top: 20px" />
 
+<!--
+- Point to SDK CDN requests in the capture.
+- Explain runtime asset loading and the self-hosting guidance.
+- Offline use also requires considering web maps, basemaps, feature data, and elevation services.
+-->
+
 ---
 
 # Fun fact
@@ -329,11 +451,22 @@ These slides are built with Vite. ✨
 
 (with help from [Slidev](https://sli.dev/))
 
+<!--
+- These slides use Vite through Slidev.
+- They are published as static output.
+- Transition: organizing UI state and rendering with a framework.
+-->
+
 ---
 layout: intro
 ---
 
 # Using frameworks
+
+<!--
+- Keep the same mapping task.
+- Introduce state-driven UI, types, and a component boundary.
+-->
 
 ---
 
@@ -343,6 +476,12 @@ layout: intro
   we write applications
 - React, Angular, and Vue are widely used options
 - Web components work in most major frameworks because they are standards-based
+
+<!--
+- Frameworks provide shared application patterns.
+- Web components integrate with major frameworks; syntax differs.
+- Use React for the examples.
+-->
 
 ---
 
@@ -357,6 +496,13 @@ layout: intro
 - Components re-render when state changes, so no need for query selectors or
   manual DOM manipulation
 - React 19 has support for web components out of the box
+
+<!--
+- Describe UI from inputs and state.
+- State changes lead to updated rendering.
+- Distinguish React components from browser web components.
+- Show how the two work together.
+-->
 
 ---
 layout: full
@@ -385,6 +531,12 @@ graph TD
   Main --> Map
 ```
 
+<!--
+- Start at App and follow the branches.
+- Empty user state → Login.
+- Populated user state → Profile.
+-->
+
 ---
 layout: center
 ---
@@ -392,6 +544,12 @@ layout: center
 <video width="640" height="480" controls>
     <source src="./assets/react-tree.webm" type="video/webm">
 </video>
+
+<!--
+- Play the animation.
+- Follow the login/profile branch as state changes.
+- Connect the idea to the mapping app’s statistics chips.
+-->
 
 ---
 layout: center
@@ -408,31 +566,12 @@ npm run dev
 ```
 
 <!--
-- show differences to file extension
-- show how JSX is used, such as event handlers and props
-- highlight how we no longer have to use query selector
-- highlight the event listening logic
-
-Script:
-
-1. show package.json
-  - added react and react-dom package
-  - added vite react plugin
-
-2. Show vite.config.js
-  - added vite react plugin
-
-3. Show index.html
-  - now its just a very simple html template with a "root" div
-
-4. show main.jsx (highlight .jsx extension)
-  - bootstrap our app with react-dom, this is the entrypoint to our react application
-
-5. show app.jsx
-  - event.target > what's "target"
-  - event.detail > what's "event.detail"
-
-6. show the app
+1. Open `demo/2-react`: `package.json` and `vite.config.js`.
+2. Show the root element in `index.html`, then `createRoot` in `src/main.jsx`.
+3. In `src/App.jsx`, locate distance/elevation state.
+4. Follow `handleElevationProfileChange` to the conditional chip markup.
+5. Select a trail → wait for statistics → clear selection → select again.
+6. Show object properties and function callbacks passed through JSX.
 -->
 
 ---
@@ -460,6 +599,13 @@ graph TD
   Handler -->|updates App state with setDistance / setElevation| App
 ```
 
+<!--
+- Trace: component event → handler → state update → rendered chips.
+- `event.target`: emitting component.
+- `event.detail`: information about the change.
+- Filter property-change events before processing results.
+-->
+
 ---
 
 # Summary of benefits from React
@@ -469,6 +615,13 @@ graph TD
 - Easier event logic
 - No need for query selectors
 - Easy to consume web components
+
+<!--
+- Properties and callbacks sit beside markup.
+- Chips render from state.
+- Less manual DOM wiring in this app.
+- React applications can still need element references.
+-->
 
 ---
 layout: two-cols
@@ -496,31 +649,34 @@ chip.textContent = distance;
 
 ::right::
 
-### Listen for changes
+### Watch analysis progress
 
 ```js
-profile.addEventListener(
-  'arcgisPropertyChange',
-  (event) => {
-    if (event.detail.name !== 'progress'
-      || profile.progress !== 1) return;
-
-    const stats = profile.profiles
-      .at(0)?.statistics;
+const analysisView =
+  await view.whenAnalysisView(
+    profile.analysis
+  );
+watch(
+  () => analysisView.progress,
+  (progress) => {
+    if (progress !== 1
+      || !profile.feature) return;
+    const stats = analysisView.statistics;
     const value = stats?.maxDistance ?? 0;
-    const unit = profile.effectiveUnits
-      .distance;
-    const distance =
+    const unit =
+      profile.effectiveDisplayUnits.distance;
+    chip.textContent =
       `${value.toFixed(2)} ${unit}`;
-    chip.textContent = distance;
   }
 );
 ```
 
 <!--
-Focused excerpt: distance only; the app handles elevation the same way.
-The HTML declares #distance and arcgis-elevation-profile.
-Run this after the elements are available. The full demo checks element references.
+- Distance-only excerpt; full demo also handles elevation and clearing selection.
+- Import `watch` from `@arcgis/core/core/reactiveUtils.js`.
+- Run setup inside an async function after the map view and profile component are ready.
+- `view` is the associated map view.
+- Follow: analysis progress → `analysisView.statistics` → update the existing chip.
 -->
 
 ---
@@ -555,16 +711,22 @@ return (
 ### Handle the event
 
 ```jsx
-function onChange(event) {
+async function onChange(event) {
   const profile = event.target;
   if (event.detail.name !== 'progress'
     || profile.progress !== 1) return;
-
-  const stats = profile.profiles
-    .at(0)?.statistics;
-  const value = stats?.maxDistance ?? 0;
-  const unit = profile.effectiveUnits
-    .distance;
+  const view = profile.view;
+  if (!view) return;
+  await view.when();
+  const analysisView =
+    await view.whenAnalysisView(
+      profile.analysis
+    );
+  if (!profile.feature) return;
+  const value =
+    analysisView.statistics?.maxDistance ?? 0;
+  const unit =
+    profile.effectiveDisplayUnits.distance;
   setDistance(
     `${value.toFixed(2)} ${unit}`
   );
@@ -572,10 +734,12 @@ function onChange(event) {
 ```
 
 <!--
-Both excerpts belong inside the same React component; import useState from React.
-Focused excerpt: distance only. The full demo also updates elevation.
-React renders the chip from state. The fragment groups the returned elements.
-The app connects the profile to the map and selected trail.
+- Both excerpts belong inside the same React component; import `useState`.
+- The app connects the profile to the map and selected trail.
+- Follow: filter progress event → await analysis view → read statistics → update state.
+- Use `effectiveDisplayUnits` for the displayed unit.
+- The fragment groups the returned elements.
+- Distance-only excerpt; full demo also handles elevation and clearing selection.
 -->
 
 ---
@@ -587,6 +751,13 @@ The app connects the profile to the map and selected trail.
 - Improves developer experience and code quality
 - The Maps SDK's components and Calcite's components come with TypeScript
   definitions out of the box
+
+<!--
+- Types describe expected inputs and outputs.
+- Show their value for editor feedback.
+- SDK and Calcite packages include type definitions.
+- Types complement runtime checks and testing.
+-->
 
 ---
 layout: center
@@ -603,11 +774,13 @@ npm run dev
 ```
 
 <!--
-- Show tsconfig
-- Show how to web component types use types in React
-- Highlight the syntax highlighting and IntelliSense
-- Show error when passing wrong type
-- Maybe add a new method to the app component and show how to use the typings?
+1. Open `demo/3-typescript`: `package.json`, `tsconfig.json`, and `src/vite-env.d.ts`.
+2. In `src/App.tsx`, hover `popupDockOptions: DockOptions`.
+3. Add an unknown property; show the diagnostic; undo the edit.
+4. Show `round(value?: number)` and the typed map event.
+5. Demonstrate `event.target` completion and the unavailable-map guard.
+6. Restore the code; run `npm run typecheck`.
+7. Explain that type checking is separate from the Vite build.
 -->
 
 ---
@@ -619,6 +792,12 @@ npm run dev
 - IntelliSense
 - Error checking
 - Give us more confidence in the code we write
+
+<!--
+- Recap completion, API documentation, readable contracts, and early diagnostics.
+- Mention automatic type inference.
+- Transition: group related logic behind a component boundary.
+-->
 
 ---
 
@@ -638,9 +817,11 @@ npm run dev
 ```
 
 <!--
-Open the final app and select a trail.
-Show the extracted elevation-profile component and its props.
-Compare it with demo/3-typescript: profile state and event handling now live together.
+1. Compare `src/App.tsx` in `demo/3-typescript` and `demo/4-typescript-react-encapsulation`.
+2. Locate `ElevationProfilePanel`: a separate component in the same file.
+3. Show its `selectedGraphic` prop, local state, handler, and markup.
+4. Show the parent’s conditional render.
+5. Select a trail to reveal the panel; clear selection to remove it.
 -->
 
 ---
@@ -653,6 +834,11 @@ Compare it with demo/3-typescript: profile state and event handling now live tog
 - [jsapi-resources](https://github.com/Esri/jsapi-resources) repo has samples
   for many frameworks
 - Get started with `npm init @arcgis` and select your framework of choice
+
+<!--
+- Transfer the ideas: properties/events, state ownership, types, and build tooling.
+- Point to Angular guidance, the Vue template, and the scaffold command.
+-->
 
 ---
 
@@ -672,11 +858,24 @@ Build the user experience with SDK components and Calcite Design System.
 
 Explore branding, theming, and customization strategies for your apps.
 
+<!--
+- Vite: development and build tooling.
+- React: UI updates driven by state.
+- TypeScript: editor feedback.
+- Components: related behavior grouped together.
+- Point to the two follow-on sessions this afternoon.
+-->
+
 ---
 layout: center
 ---
 
 # Questions?
+
+<!--
+- Invite questions.
+- Return to relevant source examples where useful.
+-->
 
 ---
 src: ./footer.md
