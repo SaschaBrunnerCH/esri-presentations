@@ -1,0 +1,15 @@
+packages:
+  - 2026/app-development-components-frameworks
+
+overrides:
+  dompurify: 3.4.16
+  lodash-es: 4.18.1
+  'pptxgenjs>image-size': 2.0.4
+
+allowBuilds:
+  # Install the browser explicitly with pnpm exec playwright install chromium.
+  playwright-chromium: false
+  fsevents: false
+
+minimumReleaseAgeExclude:
+  - dompurify@3.4.16

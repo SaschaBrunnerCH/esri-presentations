@@ -22,12 +22,12 @@ From the root of this repository:
 
 ```sh
 cd 2026/app-development-components-frameworks/demo/2-react
-npm ci
-npm run dev
+pnpm install --frozen-lockfile
+pnpm run dev
 ```
 
-Requires Node.js 22.22.1 or later. Open the URL printed by Vite.
+Requires Node.js 22.22.1 or later and pnpm 12.6.0. Open the URL printed by Vite.
 
-Run `npm run build` to generate `dist/` and `npm run preview` to preview it.
+Run `pnpm run build` to generate `dist/` and `pnpm run preview` to preview it.
 
 See [shared setup instructions](../../LOCAL_SETUP.md) for the toolchain and browser checks.

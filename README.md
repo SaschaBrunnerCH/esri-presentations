@@ -11,15 +11,17 @@ Slides and demo apps for Esri developer events.
 
 ## Quick start
 
-Use Node.js 22.22.1 or later.
+Use Node.js 22.22.1 or later and pnpm 12.6.0. The `packageManager` field pins pnpm for this repository.
+Install pnpm using the [official setup instructions](https://pnpm.io/installation).
+With Corepack available, run `corepack enable pnpm` before the commands below.
 
 ```sh
-npm ci --ignore-scripts
+pnpm install --frozen-lockfile
 cd 2026/app-development-components-frameworks
-npm run start
+pnpm run start
 ```
 
-Each npm demo has its own dependencies and lockfile. See the
+Each pnpm demo has its own dependencies and lockfile. See the
 [setup guide](2026/app-development-components-frameworks/LOCAL_SETUP.md) for
 running demos, building, and browser checks.
 
@@ -28,15 +30,15 @@ running demos, building, and browser checks.
 From the repository root:
 
 ```sh
-npm run lint
-npm run format
+pnpm run lint
+pnpm run format
 ```
 
 `lint` checks formatting with Prettier; it does not run ESLint. In each TypeScript
-demo, run `npm run typecheck` for compiler diagnostics. Run `npm run build` in
+demo, run `pnpm run typecheck` for compiler diagnostics. Run `pnpm run build` in
 the presentation or demo directory to create its production build.
 
-After initializing Git, run `npm run prepare` to install the staged-file
+After initializing Git, run `pnpm run prepare` to install the staged-file
 formatting hook. Git 2.32 or later is required.
 
 ## Source and licence

@@ -140,7 +140,7 @@ url: https://developers.arcgis.com/calcite-design-system/
   - Syntax for including modules:
     - `const WebMap = await $arcgis.import("@arcgis/core/WebMap.js");`
 - Add the SDK as a dependency when building applications that scale
-  (npm packages: `@arcgis/core`, `@arcgis/map-components`,
+  (packages installed with pnpm: `@arcgis/core`, `@arcgis/map-components`,
   `@esri/calcite-components`)
   - JavaScript runtime environment and package manager required
   - Work with a bundler (Vite, Parcel, Webpack) and framework (React, Angular,
@@ -151,14 +151,14 @@ url: https://developers.arcgis.com/calcite-design-system/
 </v-clicks>
 
 <!--
-- Start with the CDN approach visible. Click once to reveal the npm approach and its nested points.
+- Start with the CDN approach visible. Click once to reveal the pnpm approach and its nested points.
 - Connect to the first session: start from the same component-based HTML app and its CDN loading approach.
 - The CDN supplies hosted SDK files directly to the browser.
-- npm is the package manager: it downloads packages into node_modules and records dependencies in package.json and package-lock.json.
+- pnpm is the package manager: it downloads packages into node_modules and records dependencies in package.json and pnpm-lock.yaml.
 - Name the packages: @arcgis/core for the core API, @arcgis/map-components for mapping components, and @esri/calcite-components for the surrounding UI.
 - Vite resolves imports from those installed packages and prepares the browser app.
 - Map components are installed from @arcgis/map-components and imported by the application.
-- For these existing demos, use npm ci to reproduce the locked versions.
+- For these existing demos, use pnpm install --frozen-lockfile to reproduce the locked versions.
 - Frameworks are optional; the first Vite demo uses plain JavaScript.
 -->
 
@@ -173,16 +173,15 @@ url: https://developers.arcgis.com/javascript/latest/system-requirements/
 - A JavaScript runtime environment
   - Node.js
 - And a package manager
-  - NPM (comes with Node.js)
-  - pnpm (alternative package manager)
+  - pnpm (install separately; pinned version in `package.json`)
 - For more information, see the SDK's
   [system requirements](https://developers.arcgis.com/javascript/latest/system-requirements/)
   documentation
 
 <!--
 - Browser: runs the application.
-- Node and a package manager such as npm or pnpm: run development tools.
-- These demos use npm and package-lock.json; keep using npm ci to reproduce their dependencies.
+- Node and the pnpm package manager: run development tools.
+- These demos use pnpm and pnpm-lock.yaml; keep using pnpm install --frozen-lockfile to reproduce their dependencies.
 - Check SDK requirements and repository setup instructions.
 -->
 
@@ -193,8 +192,8 @@ url: https://developers.arcgis.com/javascript/latest/system-requirements/
 - Reminder - We’ll be building on the app from session Part 1 as a starting
   point
 - But, you can create a new app using a single command:
-  - Run `npm init @arcgis` in your terminal and follow the prompts,
-  - or skip the prompts by using `npx @arcgis/create -n my-arcgis-app -t vite`
+  - Run `pnpm create @arcgis` in your terminal and follow the prompts,
+  - or skip the prompts by using `pnpm dlx @arcgis/create -n my-arcgis-app -t vite`
   - This CLI tool uses
     [git-sparse-checkout](https://git-scm.com/docs/git-sparse-checkout) to fetch
     app templates from the
@@ -212,7 +211,7 @@ url: https://developers.arcgis.com/javascript/latest/get-started/
 ---
 
 <!--
-- Locate npm setup and framework guidance.
+- Locate package installation and framework guidance.
 - Preview the component type references used later in the React + TypeScript demo.
 -->
 
@@ -260,7 +259,7 @@ graph LR
     JS[JavaScript .js/.ts]
     CSS[CSS/Sass .css/.scss]
     IMG[Assets .jpg/.json]
-    NPM[NPM dependencies]
+    PACKAGES[Package dependencies]
   end
 
   Bundler("Bundler")
@@ -286,7 +285,7 @@ graph LR
 
 1. Optimize performance (reduce file sizes, split bundles...)
 2. Improve development experience (live updates...)
-3. Permits consumption of NPM packages
+3. Permits consumption of packages installed with pnpm
 4. Make testing code simpler
 
 Bonus: can extend the bundlers using plugins (React support, SVG imports,
@@ -325,8 +324,8 @@ Local source: `demo/1-javascript`
 
 ```sh
 cd demo/1-javascript
-npm ci
-npm run dev
+pnpm install --frozen-lockfile
+pnpm run dev
 ```
 
 <!--
@@ -415,14 +414,14 @@ As of 5.0.0, `@arcgis/*` packages follow semantic versioning.
 | `~5.1.25` | Patches: `>=5.1.25 <5.2.0`                  |
 | `^5.1.25` | Minor and patch releases: `>=5.1.25 <6.0.0` |
 
-Commit `package-lock.json` to record the resolved dependency versions.
+Commit `pnpm-lock.yaml` to record the resolved dependency versions.
 
-Use `npm ci` to install those versions reproducibly.
+Use `pnpm install --frozen-lockfile` to install those versions reproducibly.
 
 <!--
 - Tilde in this example: patch updates.
 - Caret in this example: minor and patch updates within the major version.
-- `npm ci`: install the locked dependency tree.
+- `pnpm install --frozen-lockfile`: install the locked dependency tree.
 - Requires agreement between the lockfile and `package.json`.
 -->
 
@@ -430,16 +429,16 @@ Use `npm ci` to install those versions reproducibly.
 
 # Publishing
 
-1. Run the build command: `npm run build`
+1. Run the build command: `pnpm run build`
 2. Deploy the `dist` folder anywhere!
    - any hosting provider (GitHub Pages, Vercel)
    - or local server (NGINX, Microsoft IIS, Apache)
 
 <!--
-1. Run `npm run build` in `demo/1-javascript`.
+1. Run `pnpm run build` in `demo/1-javascript`.
 2. Inspect `dist/index.html` and generated assets/chunks.
 3. Explain deployment to static hosting.
-4. Use `npm run preview` to inspect the built app locally.
+4. Use `pnpm run preview` to inspect the built app locally.
 -->
 
 ---
@@ -493,7 +492,7 @@ layout: intro
   we write applications
 - React, Angular, and Vue are widely used options
 - Web components work in most major frameworks because they are standards-based
-- Start with the [application templates](https://github.com/Esri/jsapi-resources/tree/main/templates) or run `npm init @arcgis`
+- Start with the [application templates](https://github.com/Esri/jsapi-resources/tree/main/templates) or run `pnpm create @arcgis`
 
 <!--
 - Frameworks provide shared application patterns.
@@ -580,8 +579,8 @@ Local source: `demo/2-react`
 
 ```sh
 cd demo/2-react
-npm ci
-npm run dev
+pnpm install --frozen-lockfile
+pnpm run dev
 ```
 
 <!--
@@ -788,8 +787,8 @@ Local source: `demo/3-typescript`
 
 ```sh
 cd demo/3-typescript
-npm ci
-npm run dev
+pnpm install --frozen-lockfile
+pnpm run dev
 ```
 
 <!--
@@ -798,7 +797,7 @@ npm run dev
 3. Add an unknown property; show the diagnostic; undo the edit.
 4. Show `round(value?: number)` and the typed map event.
 5. Demonstrate `event.target` completion and the unavailable-map guard.
-6. Restore the code; run `npm run typecheck`.
+6. Restore the code; run `pnpm run typecheck`.
 7. Explain that type checking is separate from the Vite build.
 -->
 
@@ -831,8 +830,8 @@ npm run dev
 
 ```sh
 cd demo/4-typescript-react-encapsulation
-npm ci
-npm run dev
+pnpm install --frozen-lockfile
+pnpm run dev
 ```
 
 <!--
@@ -852,7 +851,7 @@ npm run dev
 - [Vue template application](https://github.com/Esri/jsapi-resources/tree/main/templates/js-maps-sdk-vue)
 - [jsapi-resources](https://github.com/Esri/jsapi-resources) repo has samples
   for many frameworks
-- Get started with `npm init @arcgis` and select your framework of choice
+- Get started with `pnpm create @arcgis` and select your framework of choice
 
 <!--
 - Transfer the ideas: properties/events, state ownership, types, and build tooling.
