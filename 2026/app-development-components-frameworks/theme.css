@@ -1,0 +1,174 @@
+/* EUDTS 2026 PowerPoint artwork, layered over its gradient palette. */
+.eudts-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(90deg, #22244e 0%, #242677 50%, #206161 99%);
+}
+.eudts-background.eudts-section {
+  background: linear-gradient(90deg, #173248 0%, #1e5b5b 61%, #3c8b8e 100%);
+}
+.eudts-background img {
+  position: absolute;
+  max-width: none;
+}
+.eudts-map {
+  left: 45.41%;
+  top: 0;
+  width: 54.59%;
+  height: 100.14%;
+  opacity: 0.3;
+}
+.eudts-map-content {
+  left: 39.91%;
+  width: 60.09%;
+  height: 99.8%;
+  opacity: 0.15;
+}
+.eudts-art-cover {
+  left: 55.52%;
+  top: 1%;
+  width: 44.48%;
+  height: 99%;
+}
+.eudts-art-section {
+  left: 45.97%;
+  top: 0.15%;
+  width: 54.03%;
+  height: 99.85%;
+}
+.eudts-art-closing {
+  left: 0;
+  top: 0;
+  width: 43.75%;
+  height: 100%;
+}
+.eudts-logo-small {
+  left: 7.5%;
+  top: 10.02%;
+  width: 14.21%;
+  height: 6.03%;
+  opacity: 0.5;
+}
+.eudts-event {
+  position: absolute;
+  left: 7.5%;
+  bottom: 6%;
+  font:
+    700 15px/1.3 Arial,
+    sans-serif;
+  color: #fff;
+  pointer-events: none;
+}
+.eudts-event small {
+  display: block;
+  margin-top: 8px;
+  font-size: 9px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+.slidev-layout.cover {
+  padding-right: 40%;
+}
+.slidev-layout.cover h2 {
+  font-size: 30px;
+  line-height: 1.2;
+}
+.slidev-layout.cover p {
+  font-size: 17px;
+  line-height: 1.5;
+}
+.slidev-layout.intro {
+  padding-right: 43%;
+}
+.slidev-layout.intro h1 {
+  font-size: 44px;
+  line-height: 1.15 !important;
+}
+.slidev-layout[is='social'] {
+  padding-right: 39%;
+}
+.slidev-layout[is='social'] h1 {
+  font-size: 32px;
+}
+.slidev-layout[is='social'] li {
+  font-size: 18px;
+}
+.slidev-layout[is='social'] p {
+  font-size: 18px;
+}
+.slidev-layout a {
+  color: #c0e8ff;
+}
+.eudts-feedback {
+  position: absolute;
+  inset: 0;
+  padding: 50px 7.5% 35px;
+}
+.eudts-feedback h1 {
+  font:
+    32px/1.2 Arial,
+    sans-serif;
+  margin: 0 0 30px;
+}
+.eudts-feedback ol {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.eudts-feedback li {
+  text-align: center;
+}
+.eudts-feedback p {
+  font-size: 16px;
+  line-height: 1.3;
+  height: 63px;
+  margin: 0 0 15px;
+}
+.eudts-feedback p span {
+  color: #c0e8ff;
+}
+.eudts-feedback img {
+  display: block;
+  height: 275px;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  object-fit: contain;
+}
+.eudts-closing {
+  position: absolute;
+  left: 48.95%;
+  top: 44.56%;
+  width: 34%;
+}
+.eudts-closing img {
+  width: 88.5%;
+}
+.eudts-closing p {
+  font-size: 10px;
+  line-height: 1.4;
+  margin-top: 15px;
+  color: #c0e8ff;
+}
+
+/* Keep comparison snippets readable without horizontal scrolling. */
+.slidev-layout:has(> .code-comparison) {
+  gap: 24px;
+}
+.slidev-layout:has(> .code-comparison) h1 {
+  font-size: 30px;
+}
+.slidev-layout:has(> .code-comparison) h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.slidev-layout:has(> .code-comparison) pre {
+  font-size: 13px;
+  line-height: 1.5;
+}

@@ -1,0 +1,181 @@
+{
+  "source": "http://localhost:5173/",
+  "requests": [
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/esri/widgets/Zoom/t9n/Zoom_en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/icon/minus16.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/icon/plus16.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/map-components/assets/features-next/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/flow-item/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/popover/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/button/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/panel/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/map-components/assets/popup/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/action/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/map-components/assets/legend/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/map-components/assets/zoom/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/map-components/assets/expand/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/map-components/assets/search/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/autocomplete/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/icon/legend16.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/input/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/esri/geometry/support/pe-wasm.wasm",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/icon/search16.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/esri/core/workers/RemoteClient.js",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/esri/core/workers/chunks/e8024f85c6beca22ccfa.js",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/esri/core/workers/chunks/5b8808add63c89a47e03.js",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/icon/caretDown16.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/esri/core/workers/chunks/aa9bf55eb6298597c40d.js",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/esri/widgets/FeatureTable/t9n/FeatureTable_en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/esri/t9n/common_en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/esri/widgets/Editor/t9n/Editor_en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/esri/core/t9n/Units_en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/esri/widgets/support/t9n/uriUtils_en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/esri/core/workers/chunks/2682e5939820c9960a91.js",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/esri/core/workers/chunks/b6a2657d154280038aa3.js",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/alert/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/list/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/list-item/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/notice/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/dialog/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/scrim/t9n/messages.en.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/icon/exclamationMarkTriangle16.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/icon/x16.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/icon/ellipsis16.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/icon/showColumn16.json",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/esri/core/workers/chunks/75582704444436bdc55c.js",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/esri/core/workers/chunks/d778f6a1bdd32d1d71d8.js",
+      "status": 200
+    },
+    {
+      "url": "https://js.arcgis.com/5.1.25/@arcgis/core/assets/components/assets/filter/t9n/messages.en.json",
+      "status": 200
+    }
+  ]
+}

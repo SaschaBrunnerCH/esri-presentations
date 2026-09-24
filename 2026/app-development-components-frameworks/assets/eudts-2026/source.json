@@ -1,0 +1,19 @@
+{
+  "source": "EUDTS 2026 - WEB - ArcGIS Maps SDK for JavaScript App Development with Components_Using Frameworks.pptx",
+  "assets": {
+    "map-cover.png": "ppt/media/image21.png",
+    "art-cover.png": "ppt/media/image22.png",
+    "logo-small.png": "ppt/media/image23.png",
+    "map-content.png": "ppt/media/image24.png",
+    "feedback-event.jpeg": "ppt/media/image25.jpeg",
+    "feedback-surveys.png": "ppt/media/image27.png",
+    "feedback-select.png": "ppt/media/image28.png",
+    "feedback-complete.png": "ppt/media/image29.png",
+    "art-section.png": "ppt/media/image30.png",
+    "art-closing.png": "ppt/media/image36.png",
+    "logo-closing.png": "ppt/media/image37.png",
+    "map-alternate.png": "ppt/media/image38.png",
+    "art-demo.png": "ppt/media/image39.png"
+  },
+  "notes": "Images extracted unchanged. Gradients, opacity, and placement reproduced in theme.css."
+}
