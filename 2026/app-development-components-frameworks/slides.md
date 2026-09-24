@@ -61,10 +61,14 @@ Second of four sessions · Wednesday, 21 October · All times CEST
 
 Today: Calcite, ArcGIS Maps SDK for JavaScript, bundlers, and frameworks.
 
+AI-assisted coding: understand the project, guide changes, verify results.
+
 <!--
 - Locate this talk in the four-session conference series.
 - Our progression: HTML → Vite → React → TypeScript → encapsulation.
 - Point to this afternoon for deeper UX and styling coverage.
+- AI can help write code; these fundamentals help us explain the project and judge suggestions.
+- Follow the same review habit throughout: start from a working example, provide project context, and check the result.
 -->
 
 ---
@@ -199,10 +203,15 @@ url: https://developers.arcgis.com/javascript/latest/system-requirements/
     app templates from the
     [Esri/jsapi-resources](https://github.com/Esri/jsapi-resources) repository
 
+Use a working template as a reference for AI-assisted changes.
+
 <!--
 - Scaffold command: starting project.
 - Existing app: follow manual setup guidance.
 - Inspect templates in `jsapi-resources`.
+- A working template shows packages, imports, and components that belong together.
+- For an existing app, generate a template separately and use its code as a reference for the assistant.
+- Check that the reference matches the SDK version and the intended behavior.
 -->
 
 ---
@@ -228,6 +237,8 @@ Demo source: `demo/0-vanilla`
 <!--
 1. Open `demo/0-vanilla`; select a trail.
 2. Show the connected map, table, popup, and elevation profile.
+   - Wait for results, clear selection, and select a trail again.
+   - Establish the working behavior to check after any code change.
 3. Open `index.html`: CDN entry and component markup.
 4. Point to `main.js` for application behavior.
 -->
@@ -328,9 +339,14 @@ pnpm install --frozen-lockfile
 pnpm run dev
 ```
 
+AI context: `package.json`, the lockfile, and existing source code.
+
 <!--
 1. Open `demo/1-javascript`.
 2. Show `package.json`: scripts and dependencies.
+   - Point to the SDK version and the dev/build commands.
+   - Give an assistant the manifest, lockfile, and relevant source as context.
+   - Check that a suggestion fits the installed packages and existing app structure.
 3. Trace `index.html` → `src/main.js` → component imports.
 4. Change the navigation heading; save and show the browser update.
 5. Undo the edit.
@@ -434,11 +450,15 @@ Use `pnpm install --frozen-lockfile` to install those versions reproducibly.
    - any hosting provider (GitHub Pages, Vercel)
    - or local server (NGINX, Microsoft IIS, Apache)
 
+After the build, verify behavior: select a trail → profile → clear selection.
+
 <!--
 1. Run `pnpm run build` in `demo/1-javascript`.
 2. Inspect `dist/index.html` and generated assets/chunks.
 3. Explain deployment to static hosting.
 4. Use `pnpm run preview` to inspect the built app locally.
+5. Verify the baseline interaction: select a trail, wait for the profile, clear selection, and select again.
+6. A successful build checks that the output can be produced; it does not establish that the app meets the intended behavior. Apply both checks to AI-assisted changes.
 -->
 
 ---
@@ -456,6 +476,7 @@ Use `pnpm install --frozen-lockfile` to install those versions reproducibly.
 <!--
 - Point to SDK CDN requests in the capture.
 - Explain runtime asset loading and the self-hosting guidance.
+- When checking a change, confirm that the running app can still load its assets and data services; a build alone does not verify those requests.
 - Offline use also requires considering web maps, basemaps, feature data, and elevation services.
 -->
 
