@@ -2,6 +2,8 @@
 
 Slides and demo apps for Esri developer events.
 
+[View published presentations](https://saschabrunnerch.github.io/esri-presentations/)
+
 ## 2026
 
 - [ArcGIS Maps SDK for JavaScript: App Development with Components – Using Frameworks](2026/app-development-components-frameworks/README.md)  
@@ -44,3 +46,9 @@ The 2026 Using Frameworks presentation is adapted from
 Its [setup guide](2026/app-development-components-frameworks/LOCAL_SETUP.md)
 records the source commit and adaptations. See [LICENCE.md](LICENCE.md) and the
 licence preserved with the presentation.
+
+## GitHub Pages
+
+[Deploy workflow](.github/workflows/deploy.yml) builds the presentation and publishes
+it on pushes to `main`. It can also be started manually from GitHub Actions.
+The site includes a presentation index; demo source code remains in the repository.

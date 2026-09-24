@@ -19,7 +19,7 @@ Presenters: Stefan Schläfli & Sascha Brunner
 
 [![Using Frameworks — European Summit 2026 title slide](./assets/header-slide.png)](./slides.md)
 
-[Slide source](./slides.md) · [Local setup](./LOCAL_SETUP.md)
+[View slides](https://saschabrunnerch.github.io/esri-presentations/2026/app-development-components-frameworks/) · [Slide source](./slides.md) · [Local setup](./LOCAL_SETUP.md)
 
 All four sessions take place on Wednesday, 21 October (CEST):
 
