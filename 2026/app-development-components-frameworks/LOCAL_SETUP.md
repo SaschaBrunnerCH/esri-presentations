@@ -41,7 +41,7 @@ Use `pnpm run build` in the presentation directory to create `dist/`.
 
 Each Vite demo is independent and includes its own `pnpm-lock.yaml` and
 `pnpm-workspace.yaml` for reproducible installs. The root workspace includes only
-the presentation; installing at the root does not install the demo apps. From a demo directory (`demo/1-javascript`,
+ok the two presentations; installing at the root does not install the demo apps. From a demo directory (`demo/1-javascript`,
 `demo/2-react`, `demo/3-typescript`, or
 `demo/4-typescript-react-encapsulation`):
 

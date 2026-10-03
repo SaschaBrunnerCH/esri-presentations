@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 80" role="img" aria-labelledby="observation-title">
+<title id="observation-title">App failure</title>
+<rect x="39" y="14" width="118" height="55" rx="3" fill="#123c5e" stroke="#ffad95" stroke-width="2.5"/>
+  <path d="M39 28h118" stroke="#ffad95" stroke-width="1.5"/>
+  <text x="98" y="25" text-anchor="middle" fill="#ffad95" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700">APP</text>
+  <path d="m88 37 20 20m0-20-20 20" fill="none" stroke="#ffad95" stroke-width="4" stroke-linecap="round"/>
+  <text x="98" y="66" text-anchor="middle" fill="#ffad95" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="700" letter-spacing="1">ERROR</text>
+</svg>

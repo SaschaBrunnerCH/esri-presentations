@@ -48,6 +48,16 @@ jobs:
           --router-mode hash
           --out ../../dist/2026/app-development-components-frameworks/
 
+      - name: Build AI Across the Development Cycle presentation
+        working-directory: 2026/ai-infused-development-lessons-patterns
+        env:
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: >-
+          pnpm run build
+          --base "$PAGES_BASE_PATH/2026/ai-infused-development-lessons-patterns/"
+          --router-mode hash
+          --out ../../dist/2026/ai-infused-development-lessons-patterns/
+
       - name: Add presentation index
         run: cp site/index.html dist/index.html
 

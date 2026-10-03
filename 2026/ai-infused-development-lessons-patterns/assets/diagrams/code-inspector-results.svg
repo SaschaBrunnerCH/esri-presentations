@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 80" role="img" aria-labelledby="results-title">
+<title id="results-title">Code inspection produces results</title>
+<path d="M421 40h66" fill="none" stroke="#a8e7de" stroke-width="2.5" stroke-dasharray="7 7"/>
+<path d="m477 34 10 6-10 6" fill="none" stroke="#a8e7de" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="536" y="11" width="209" height="59" rx="3" fill="#123c5e" stroke="#a8e7de" stroke-width="2.5"/>
+  <path d="M536 26h209" stroke="#a8e7de" stroke-width="1.5"/>
+  <circle cx="546" cy="19" r="2" fill="#ffda80"/>
+  <circle cx="555" cy="19" r="2" fill="#a8e7de"/>
+  <circle cx="564" cy="19" r="2" fill="#a8e7de"/>
+  <path d="m561 38-7 8 7 8m30-16 7 8-7 8m-19 8 8-32" fill="none" stroke="#ffda80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M618 38h99M618 47h70M618 56h87" stroke="#a8e7de" stroke-width="3" stroke-linecap="round"/>
+</svg>

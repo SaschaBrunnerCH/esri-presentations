@@ -8,6 +8,7 @@ Slides and demo apps for Esri developer events.
 
 - [ArcGIS Maps SDK for JavaScript: App Development with Components – Using Frameworks](2026/app-development-components-frameworks/README.md)  
   Esri European Developer & Technology Summit 2026 · Stefan Schläfli and Sascha Brunner
+- [AI Across the Development Cycle](2026/ai-infused-development-lessons-patterns/README.md) · Sascha Brunner
 
 ## Quick start
 
@@ -20,6 +21,10 @@ pnpm install --frozen-lockfile
 cd 2026/app-development-components-frameworks
 pnpm run start
 ```
+
+Both presentations share the root dependencies and lockfile. To run the AI deck,
+use `cd 2026/ai-infused-development-lessons-patterns` after the root install,
+then `pnpm run start`. Both decks support `build`, `export`, and `preview`.
 
 Each pnpm demo has its own dependencies and lockfile. See the
 [setup guide](2026/app-development-components-frameworks/LOCAL_SETUP.md) for
@@ -51,6 +56,6 @@ licence preserved with the presentation.
 
 ## GitHub Pages
 
-[Deploy workflow](.github/workflows/deploy.yml) builds the presentation and publishes
-it on pushes to `main`. It can also be started manually from GitHub Actions.
+[Deploy workflow](.github/workflows/deploy.yml) builds both presentations and publishes
+them on pushes to `main`. It can also be started manually from GitHub Actions.
 The site includes a presentation index; demo source code remains in the repository.

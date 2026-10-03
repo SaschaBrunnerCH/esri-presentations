@@ -1,5 +1,6 @@
 packages:
   - 2026/app-development-components-frameworks
+  - 2026/ai-infused-development-lessons-patterns
 
 overrides:
   dompurify: 3.4.16

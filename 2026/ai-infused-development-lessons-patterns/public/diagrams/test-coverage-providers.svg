@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 430" role="img" aria-label="BrowserStack and TestingBot as external test providers"><defs>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #fff; }
+      .cap { fill: #ffda80; font-size: 14px; font-weight: 700; letter-spacing: 1.4px; }
+      .label { font-size: 20px; }
+      .small { font-size: 16px; fill: #d5ecf1; }
+      .line { fill: none; stroke: #a8e7de; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .dash { stroke-dasharray: 7 7; }
+    </style>
+  </defs>
+  <path d="M540 293v23" class="line dash" />
+  <rect x="312" y="318" width="456" height="94" rx="8" fill="#0b2c49" stroke="#ffda80" stroke-width="2" />
+  <text x="540" y="342" text-anchor="middle" class="cap">EXTERNAL TEST PROVIDERS</text>
+  <rect x="335" y="355" width="184" height="42" rx="5" fill="#17456a" />
+  <text x="427" y="382" text-anchor="middle" class="label">BrowserStack</text>
+  <rect x="541" y="355" width="204" height="42" rx="5" fill="#17456a" />
+  <text x="643" y="382" text-anchor="middle" class="label">TestingBot</text>
+</svg>

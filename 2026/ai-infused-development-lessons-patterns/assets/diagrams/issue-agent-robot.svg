@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 80" role="img" aria-labelledby="robot-title">
+<title id="robot-title">Agent reads the report</title>
+<path d="M180 40h65" fill="none" stroke="#a8e7de" stroke-width="2.5" stroke-dasharray="7 7"/>
+<path d="m237 34 10 6-10 6" fill="none" stroke="#a8e7de" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M361 17V8m-7 0h14" fill="none" stroke="#a8e7de" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="313" y="20" width="96" height="53" rx="13" fill="#123c5e" stroke="#a8e7de" stroke-width="2.5"/>
+  <circle cx="344" cy="46" r="11" fill="#082741" stroke="#ffda80" stroke-width="2.5"/>
+  <circle cx="379" cy="46" r="11" fill="#082741" stroke="#ffda80" stroke-width="2.5"/>
+  <path d="M355 45h13M309 45h-6m110 0h6" fill="none" stroke="#ffda80" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="344" cy="46" r="2.5" fill="#a8e7de"/>
+  <circle cx="379" cy="46" r="2.5" fill="#a8e7de"/>
+  <path d="M351 62c7 4 15 4 22 0" fill="none" stroke="#a8e7de" stroke-width="2" stroke-linecap="round"/>
+</svg>

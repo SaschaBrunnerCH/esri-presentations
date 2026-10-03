@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+<title id="title">Software development cycle</title>
+<desc id="desc">Seven repeating stages: plan, analyze, design, build, test, deploy and maintain.</desc>
+<path d="M184.2,47.3 A278,278 0 0 1 415.8,47.3 L355.0,180.0 A132,132 0 0 0 245.0,180.0 Z" fill="#b53246" stroke="#fff" stroke-width="2"/>
+<text x="300.0" y="85.0" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="25" font-weight="700">01</text>
+<text x="300.0" y="117.0" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="22" font-weight="700">PLAN</text>
+<path d="M425.4,51.9 A278,278 0 0 1 569.8,232.9 L428.1,268.2 A132,132 0 0 0 359.5,182.2 Z" fill="#34477e" stroke="#fff" stroke-width="2"/>
+<text x="461.8" y="162.9" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="25" font-weight="700">02</text>
+<text x="461.8" y="194.9" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="22" font-weight="700">ANALYZE</text>
+<path d="M572.2,243.4 A278,278 0 0 1 520.6,469.1 L404.8,380.3 A132,132 0 0 0 429.2,273.1 Z" fill="#1686ba" stroke="#fff" stroke-width="2"/>
+<text x="501.8" y="338.1" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="25" font-weight="700">03</text>
+<text x="501.8" y="370.1" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="22" font-weight="700">DESIGN</text>
+<path d="M514.0,477.5 A278,278 0 0 1 305.3,577.9 L302.5,432.0 A132,132 0 0 0 401.6,384.3 Z" fill="#009e89" stroke="#fff" stroke-width="2"/>
+<text x="389.8" y="478.5" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="25" font-weight="700">04</text>
+<text x="389.8" y="510.5" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="22" font-weight="700">BUILD</text>
+<path d="M294.7,577.9 A278,278 0 0 1 86.0,477.5 L198.4,384.3 A132,132 0 0 0 297.5,432.0 Z" fill="#d49c14" stroke="#fff" stroke-width="2"/>
+<text x="210.2" y="478.5" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="25" font-weight="700">05</text>
+<text x="210.2" y="510.5" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="22" font-weight="700">TEST</text>
+<path d="M79.4,469.1 A278,278 0 0 1 27.8,243.4 L170.8,273.1 A132,132 0 0 0 195.2,380.3 Z" fill="#e47c16" stroke="#fff" stroke-width="2"/>
+<text x="98.2" y="338.1" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="25" font-weight="700">06</text>
+<text x="98.2" y="370.1" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="22" font-weight="700">DEPLOY</text>
+<path d="M30.2,232.9 A278,278 0 0 1 174.6,51.9 L240.5,182.2 A132,132 0 0 0 171.9,268.2 Z" fill="#78529d" stroke="#fff" stroke-width="2"/>
+<text x="138.2" y="162.9" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="25" font-weight="700">07</text>
+<text x="138.2" y="194.9" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="22" font-weight="700">MAINTAIN</text>
+<circle cx="300" cy="300" r="126" fill="#f8fbfd"/>
+<text x="300" y="280" text-anchor="middle" fill="#243061" font-family="Arial,sans-serif" font-size="29" font-weight="700">SOFTWARE</text>
+<text x="300" y="315" text-anchor="middle" fill="#243061" font-family="Arial,sans-serif" font-size="29" font-weight="700">DEVELOPMENT</text>
+<text x="300" y="350" text-anchor="middle" fill="#243061" font-family="Arial,sans-serif" font-size="29" font-weight="700">CYCLE</text>
+</svg>

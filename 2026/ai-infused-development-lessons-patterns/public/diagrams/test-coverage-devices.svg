@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 430" role="img" aria-label="Android phone and iPad connected by USB or Wi-Fi"><defs>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #fff; }
+      .cap { fill: #ffda80; font-size: 14px; font-weight: 700; letter-spacing: 1.4px; }
+      .label { font-size: 20px; }
+      .small { font-size: 16px; fill: #d5ecf1; }
+      .line { fill: none; stroke: #a8e7de; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .dash { stroke-dasharray: 7 7; }
+    </style>
+  </defs>
+  <g transform="translate(0,-45)"><path d="M213 234H340" class="line" />
+  <rect x="224" y="196" width="106" height="26" rx="13" fill="#0c3a55" stroke="#a8e7de" stroke-width="2" />
+  <text x="277" y="214" text-anchor="middle" style="font-size:13px;font-weight:700">USB / Wi-Fi</text>
+  <rect x="109" y="139" width="104" height="170" rx="13" fill="#092b47" stroke="#a8e7de" stroke-width="4" />
+  <rect x="117" y="151" width="88" height="149" rx="5" fill="#146475" />
+  <rect x="147" y="145" width="28" height="3" rx="2" fill="#a8e7de" />
+  <g transform="translate(161 219) scale(.8) translate(-161 -219)">
+  <path d="m143 186-7-10m43 10 7-10" fill="none" stroke="#3ddc84" stroke-width="3" stroke-linecap="round" />
+  <path d="M138 208a23 23 0 0 1 46 0z" fill="#3ddc84" />
+  <circle cx="151" cy="198" r="2" fill="#fff" />
+  <circle cx="171" cy="198" r="2" fill="#fff" />
+  <rect x="138" y="211" width="46" height="39" rx="4" fill="#3ddc84" />
+  <rect x="128" y="212" width="7" height="31" rx="3.5" fill="#3ddc84" />
+  <rect x="187" y="212" width="7" height="31" rx="3.5" fill="#3ddc84" />
+  <rect x="146" y="247" width="8" height="15" rx="4" fill="#3ddc84" />
+  <rect x="168" y="247" width="8" height="15" rx="4" fill="#3ddc84" />
+  </g>
+  <text x="161" y="331" text-anchor="middle" class="label">Android phone</text>
+
+
+  <path d="M740 234H862" class="line" />
+  <rect x="750" y="196" width="106" height="26" rx="13" fill="#0c3a55" stroke="#a8e7de" stroke-width="2" />
+  <text x="803" y="214" text-anchor="middle" style="font-size:13px;font-weight:700">USB / Wi-Fi</text>
+  <rect x="862" y="155" width="178" height="136" rx="12" fill="#092b47" stroke="#a8e7de" stroke-width="4" />
+  <rect x="878" y="165" width="141" height="116" rx="3" fill="#146475" />
+  <circle cx="1029" cy="223" r="4" fill="#a8e7de" />
+  <text x="951" y="331" text-anchor="middle" class="label">iPad</text>
+  </g></svg>
