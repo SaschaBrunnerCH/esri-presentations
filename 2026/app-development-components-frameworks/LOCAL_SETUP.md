@@ -1,5 +1,8 @@
 # Local setup
 
+For browser-only demos and Windows, WSL, and macOS Chrome tab helpers, see
+[Present online with GitHub Codespaces](./ONLINE_SETUP.md).
+
 The presentation and demos were copied from
 [`maxpatiiuk/esri-dev-summit-presentations/2026/using-components-2`](https://github.com/maxpatiiuk/esri-dev-summit-presentations/tree/main/2026/using-components-2)
 at commit `e82f89acac9f4dd702f0c3bc3f5f2a1889720a48`. The slides now use the
@@ -41,7 +44,7 @@ Use `pnpm run build` in the presentation directory to create `dist/`.
 
 Each Vite demo is independent and includes its own `pnpm-lock.yaml` and
 `pnpm-workspace.yaml` for reproducible installs. The root workspace includes only
-ok the two presentations; installing at the root does not install the demo apps. From a demo directory (`demo/1-javascript`,
+the two presentations; installing at the root does not install the demo apps. From a demo directory (`demo/1-javascript`,
 `demo/2-react`, `demo/3-typescript`, or
 `demo/4-typescript-react-encapsulation`):
 

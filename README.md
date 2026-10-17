@@ -12,6 +12,9 @@ Slides and demo apps for Esri developer events.
 
 ## Quick start
 
+For browser-based demos, presentation editor settings, and Windows/WSL/macOS tab
+helpers, follow the [Codespaces setup guide](2026/app-development-components-frameworks/ONLINE_SETUP.md).
+
 Use Node.js 22.22.1 or later and pnpm 12.6.0. The `packageManager` field pins pnpm for this repository.
 Install pnpm using the [official setup instructions](https://pnpm.io/installation).
 With Corepack available, run `corepack enable pnpm` before the commands below.

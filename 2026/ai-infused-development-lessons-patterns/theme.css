@@ -1575,7 +1575,7 @@
   margin: 32px auto 0;
 }
 
-/* Reported lessons and the three additions being reviewed with Sascha. */
+/* Reported lessons and the three additional examples. */
 .lesson-pair {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
