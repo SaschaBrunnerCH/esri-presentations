@@ -26,7 +26,7 @@ preloadImages: false
 
 <div class="native-kicker">CYCLE / OVERVIEW</div>
 
-# AI support fits across the development cycle.
+# AI support at each development stage
 
 <div class="native-subtitle">At each stage, choose who leads and who helps.</div>
 <figure class="external-cycle-figure">
@@ -46,7 +46,7 @@ preloadImages: false
 
 <div class="native-kicker">PLAN / FROM OBSERVATION</div>
 
-# Turn observations into a short PRD.
+# Planning: from observation to PRD
 
 <div class="native-subtitle">PRD = Product Requirements Document</div>
 <div class="native-grid prd-grid">
@@ -80,7 +80,7 @@ preloadImages: false
 
 <div class="native-kicker">PLAN / PRD TO SDD</div>
 
-# From PRD to spec-driven development.
+# Spec-driven development
 
 <div class="native-subtitle">Agree on testable requirements before AI writes code.</div>
 <div class="lesson-pair spec-pair">
@@ -113,7 +113,7 @@ preloadImages: false
 
 <div class="native-kicker">ANALYZE / CODEBASE</div>
 
-# Understand the app before changing code.
+# Codebase exploration
 
 <div class="native-subtitle">Ask AI to explain how the app works.</div>
 <div class="native-grid prd-grid">
@@ -150,7 +150,7 @@ preloadImages: false
 
 <div class="native-kicker">ANALYZE / ISSUE</div>
 
-# Make a reported issue actionable.
+# From bug report to actionable issue
 
 <div class="native-subtitle">Record the facts before asking an agent to fix it.</div>
 <div class="native-grid prd-grid">
@@ -187,7 +187,7 @@ preloadImages: false
 
 <div class="native-kicker">DESIGN / UI OPTIONS</div>
 
-# Compare quick UI options before committing.
+# UI prototyping: compare alternatives
 
 <div class="native-subtitle">Illustrative alternatives based on a team's prototyping practice.</div>
 <div class="ui-options">
@@ -211,7 +211,7 @@ preloadImages: false
 
 <div class="native-kicker">DESIGN / MODERNIZATION</div>
 
-# Move an app to newer technology.
+# Migration: update or rebuild?
 
 <div class="native-subtitle">Outdated technology. Migration is needed.</div>
 <div class="modernization-choice">
@@ -243,7 +243,7 @@ clicks: 1
 
 <div class="native-kicker">BUILD / SCENE AUTHORING</div>
 
-# Start with a scene people can inspect.
+# Scene authoring with a browser agent
 
 <div class="native-subtitle">An agent uses Scene Viewer to create a 3D scene from an existing Web Map.</div>
 <div class="scene-demo-grid">
@@ -277,7 +277,7 @@ clicks: 1
 
 <div class="native-kicker">BUILD / CROSS-SDK</div>
 
-# Existing samples can seed another SDK.
+# Cross-SDK sample adaptation
 
 <div class="native-subtitle">A working source behavior helps explore an equivalent in another language.</div>
 <div class="sample-comparison">
@@ -301,7 +301,7 @@ clicks: 1
 
 <div class="native-kicker">BUILD / CODE QUALITY</div>
 
-# Use AI to help clean up a large codebase.
+# Code quality: lint and type errors
 
 <div class="native-subtitle">Business Analyst used agents for lint and TypeScript cleanup.</div>
 <div class="native-process cleanup-process" aria-label="Divide code cleanup into tasks, let agents make changes, then run checks and review">
@@ -328,7 +328,7 @@ clicks: 1
 
 <div class="native-kicker">TEST / PERFORMANCE</div>
 
-# Explore rendering variants in parallel.
+# Rendering performance experiments
 
 <div class="native-subtitle">Meet the visual target within CPU, GPU and memory budgets.</div>
 <div class="performance-experiment" aria-label="Illustrative comparison of three AI-assisted rendering variants">
@@ -356,7 +356,7 @@ clicks: 1
 
 <div class="native-kicker">TEST / VISUAL EVIDENCE</div>
 
-# A failed screenshot needs a diagnosis.
+# Visual testing: diagnose differences
 
 <figure class="sample-test-composite"><img src="./assets/sample-test/screenshot-testing.png" alt="Visual-test report with accepted and actual JavaScript SDK sample images, plus a dark comparison panel highlighting the temporary alert-state difference in red" /></figure>
 <div class="sample-cause-list" aria-label="Three possible sources of a visual-test difference">
@@ -381,7 +381,7 @@ clicks: 1
 
 <div class="native-kicker">TEST / WAITING FOR THE VIEW</div>
 
-# Wait for the view to be ready.
+# Testing: wait for the view state
 
 <div class="native-subtitle">Copilot helped find dependencies on fixed delays.</div>
 <div class="lesson-pair readiness-pair">
@@ -419,7 +419,7 @@ clicks: 1
 const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testing-poster.png`;
 </script>
 
-# Run the same task across environments.
+# Browser and device testing
 
 <div class="native-subtitle">Record where the browser runs and what the result proves.</div>
 <div class="coverage-demo-grid">
@@ -464,7 +464,7 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
 
 <div class="native-kicker">TEST + DEPLOY / REPEATABILITY</div>
 
-# Handle Non-Deterministic
+# Handling non-deterministic AI
 
 <div class="native-subtitle">AI proposals can vary. Make the surrounding workflow repeatable.</div>
 <div class="repeatability-workflow">
@@ -504,7 +504,7 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
 
 <div class="native-kicker">MAINTAIN / REUSABLE CHECKS</div>
 
-# Turn repeated work into tools and skills.
+# Reusable tools and skills
 
 <div class="native-subtitle">Esri teams use skills for code discovery and checks.</div>
 <div class="native-grid reusable-grid">
@@ -543,7 +543,7 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
 
 <div class="native-kicker">MAINTAIN / DOCUMENTATION</div>
 
-# Write useful docs. Test their steps.
+# Documentation: write and validate
 
 <div class="native-subtitle">Write docs with the change, then check the guide against the running app.</div>
 <ProjectGuidance />
@@ -564,7 +564,7 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
 
 <div class="native-kicker">MAINTAIN / LONG TASKS</div>
 
-# Write down progress before context is lost.
+# Context management and handoffs
 
 <div class="native-subtitle">An agreed decision can disappear from a long conversation.</div>
 <div class="native-grid handover-grid">
@@ -601,7 +601,7 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
 
 <div class="native-kicker">BEHIND THE DECK</div>
 
-# Create the presentation inside VS Code.
+# Creating this deck with AI and Slidev
 
 <div class="native-subtitle">Prompt an agent in VS Code; Slidev renders editable Markdown, HTML and SVG.</div>
 <div class="deck-making-grid">
@@ -632,7 +632,7 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
 
 <div class="native-kicker">HANDOVER</div>
 
-# Start with one small, clear task.
+# Getting started: one small task
 
 <div class="native-subtitle">Use these five steps on your next development task.</div>
 <ol class="first-task-steps" aria-label="Five steps to start using AI on a development task">
