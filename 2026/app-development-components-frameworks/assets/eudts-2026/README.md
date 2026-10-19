@@ -7,7 +7,7 @@ Images extracted without modification from the PowerPoint at the repository root
 
 The PowerPoint uses layered images rather than complete slide background bitmaps.
 `../../slide-bottom.vue` and `../../theme.css` reproduce the gradients, artwork
-placement, opacity, feedback screens, and copyright text in Slidev. Images remain
+placement, opacity and copyright text in Slidev. Feedback uses the [shared original slide](../../../.meta/assets/README.md). Images remain
 separate so that slide text is editable and accessible.
 
 - Cover: PowerPoint slide 9.

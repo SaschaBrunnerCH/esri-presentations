@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vertex spaces — 3D Object Layer</title>
+    <link rel="icon" href="data:," />
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/5.1.27/@arcgis/core/assets/esri/themes/light/main.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "esri/": "https://js.arcgis.com/5.1.27/@arcgis/core/"
+        }
+      }
+    </script>
+    <script type="module" src="./code-panel.js"></script>
+    <script type="module" src="./main.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="code-panel" aria-label="Vertex coordinate comparison">
+        <header>
+          <h1>Vertex spaces</h1>
+          <p>
+            Two meshes. The same shape.<br />Two ways to locate their vertices.
+          </p>
+        </header>
+        <div
+          class="choices"
+          role="group"
+          aria-label="Choose the coordinates to inspect"
+        >
+          <button id="world" type="button" aria-pressed="true">
+            Red · world coordinates
+          </button>
+          <button id="local" type="button" aria-pressed="false">
+            Blue · local offsets
+          </button>
+        </div>
+        <p id="explanation">
+          Every vertex has longitude, latitude and elevation.
+        </p>
+        <p class="hint">
+          Hover or focus a number to show its point. Click to keep it
+          highlighted.
+        </p>
+        <pre aria-label="Mesh coordinates"><code id="code"></code></pre>
+        <p>Faces connect vertices into triangles in both meshes.</p>
+        <pre
+          aria-label="First two mesh triangles"
+        ><code id="faces"></code></pre>
+        <div class="code-links">
+          <a href="./main.js">Scene code</a
+          ><a href="./mesh-data.js">Mesh data</a>
+        </div>
+        <footer>SDK 5.1.27</footer>
+      </section>
+      <section
+        class="scene-panel"
+        aria-label="3D scene with the two tent meshes"
+      >
+        <div id="viewDiv"></div>
+        <button id="reset" type="button">Reset camera</button>
+        <p id="vertex-label" role="status" hidden></p>
+        <p id="status" role="status" data-state="loading">Loading the scene…</p>
+      </section>
+    </main>
+  </body>
+</html>

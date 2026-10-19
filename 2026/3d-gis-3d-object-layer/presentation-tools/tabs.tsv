@@ -1,0 +1,19 @@
+Name	Url
+Slides	./
+Vertex-space demo	demos/vertex-spaces/index.html
+Vertex-space scene code	demos/vertex-spaces/main.js
+Vertex-space mesh data	demos/vertex-spaces/mesh-data.js
+Prague e-Submission	https://arnofiva.github.io/e-submission/?projectId=c3f2e676-0ac2-470a-a476-392609f9b5ee
+Zurich Scene Viewer live demo	https://zurich.maps.arcgis.com/home/webscene/viewer.html?webscene=02d8a6c0619a40dc9cc969786f3baac3
+3D object workflows	https://developers.arcgis.com/javascript/latest/3d-object-workflows/
+Upload models and applyEdits	https://developers.arcgis.com/javascript/latest/sample-code/editing-scenelayer-applyedits/
+Query 3D models sample	https://developers.arcgis.com/javascript/latest/sample-code/query-models/?view=full
+3D Object Layer overview	https://www.esri.com/arcgis-blog/products/arcgis-online/3d-gis/3d-object-layer-a-comprehensive-overview/
+SceneLayer reference	https://developers.arcgis.com/javascript/latest/references/core/layers/SceneLayer/
+Mesh reference	https://developers.arcgis.com/javascript/latest/references/core/geometry/Mesh/
+meshUtils reference	https://developers.arcgis.com/javascript/latest/references/core/geometry/support/meshUtils/
+City Download Portal	https://esri.github.io/city-download-portal/
+City Download Portal source	https://github.com/Esri/city-download-portal
+IFC viewer	https://arnofiva.github.io/ifc-viewer/
+IFC viewer source	https://github.com/arnofiva/ifc-viewer
+Original session recording	https://mediaspace.esri.com/media/t/1_cwrea8bp

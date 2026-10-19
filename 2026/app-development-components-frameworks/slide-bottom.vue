@@ -6,20 +6,7 @@ import sectionArt from './assets/eudts-2026/art-section.png';
 import closingArt from './assets/eudts-2026/art-closing.png';
 import logo from './assets/eudts-2026/logo-small.png';
 import closingLogo from './assets/eudts-2026/logo-closing.png';
-import feedbackEvent from './assets/eudts-2026/feedback-event.jpeg';
-import feedbackSurveys from './assets/eudts-2026/feedback-surveys.png';
-import feedbackSelect from './assets/eudts-2026/feedback-select.png';
-import feedbackComplete from './assets/eudts-2026/feedback-complete.png';
-
-const feedbackSteps = [
-  {
-    text: 'Select “My Event” in the event app main menu',
-    image: feedbackEvent,
-  },
-  { text: 'Select “My Surveys”', image: feedbackSurveys },
-  { text: 'Select the desired survey', image: feedbackSelect },
-  { text: 'Complete the survey', image: feedbackComplete },
-];
+import SessionFeedback from '../.meta/components/SessionFeedback.vue';
 </script>
 
 <template>
@@ -71,21 +58,7 @@ const feedbackSteps = [
     <small>Copyright © 2026 Esri. All rights reserved.</small>
   </div>
 
-  <section
-    v-if="$frontmatter.is === 'feedback'"
-    class="eudts-feedback"
-    aria-label="Session feedback"
-  >
-    <h1>Please share your feedback in the app</h1>
-    <ol>
-      <li v-for="(step, index) in feedbackSteps" :key="step.image">
-        <p>
-          <span>{{ index + 1 }}.</span> {{ step.text }}
-        </p>
-        <img :src="step.image" :alt="step.text" />
-      </li>
-    </ol>
-  </section>
+  <SessionFeedback v-if="$frontmatter.is === 'feedback'" />
 
   <div v-if="$frontmatter.is === 'esri'" class="eudts-closing">
     <img :src="closingLogo" alt="Esri — The Science of Where" />

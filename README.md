@@ -7,8 +7,9 @@ Slides and demo apps for Esri developer events.
 ## 2026
 
 - [ArcGIS Maps SDK for JavaScript: App Development with Components – Using Frameworks](2026/app-development-components-frameworks/README.md)  
-  Esri European Developer & Technology Summit 2026 · Stefan Schläfli and Sascha Brunner
+  Esri European Developer & Technology Summit 2026 · Sascha Brunner
 - [AI Across the Development Cycle](2026/ai-infused-development-lessons-patterns/README.md) · Sascha Brunner
+- [3D GIS: Working with the 3D Object Layer](2026/3d-gis-3d-object-layer/README.md) · Sascha Brunner
 
 ## Quick start
 
@@ -25,9 +26,9 @@ cd 2026/app-development-components-frameworks
 pnpm run start
 ```
 
-Both presentations share the root dependencies and lockfile. To run the AI deck,
-use `cd 2026/ai-infused-development-lessons-patterns` after the root install,
-then `pnpm run start`. Both decks support `build`, `export`, and `preview`.
+All presentations share the root dependencies and lockfile. After the root install,
+change into the session directory and run `pnpm run start`. Each deck supports
+`build`, `export`, and `preview`.
 
 Each pnpm demo has its own dependencies and lockfile. See the
 [setup guide](2026/app-development-components-frameworks/LOCAL_SETUP.md) for
@@ -50,7 +51,7 @@ the presentation or demo directory to create its production build.
 After initializing Git, run `pnpm run prepare` to install the staged-file
 formatting hook. Git 2.32 or later is required.
 
-`pnpm run check` runs formatting, local Markdown link-target checks and both
+`pnpm run check` runs formatting, local Markdown link-target checks and all
 production deck builds from one shared list. The PR validation and Pages build
 use the same command. It writes the complete presentation site to `dist/`.
 Set `PAGES_BASE_PATH=/esri-presentations` to build for the GitHub Pages project
@@ -65,8 +66,8 @@ pnpm exec vite preview --host 127.0.0.1 --port 4173 --strictPort
 pnpm run check:site http://127.0.0.1:4173/
 ```
 
-The browser smoke check loads the index and both decks, checks images and plays
-a frame of each AI-deck video. It disables Slidev's keep-screen-awake preference
+The browser smoke check loads the index and all decks, checks images and plays
+a frame of each registered video. It disables Slidev's keep-screen-awake preference
 for its headless session. It checks functional loading and media decoding;
 it does not establish GPU or physical-device acceptance. Markdown link checks
 check local file targets, not external URLs or heading anchors.
@@ -81,7 +82,7 @@ licence preserved with the presentation.
 
 ## GitHub Pages
 
-[Deploy workflow](.github/workflows/deploy.yml) builds both presentations and publishes
+[Deploy workflow](.github/workflows/deploy.yml) builds all presentations and publishes
 them on pushes to `main`. It can also be started manually from GitHub Actions.
 The site includes a presentation index; demo source code remains in the repository.
 Pull requests run [presentation checks](.github/workflows/check.yml) without

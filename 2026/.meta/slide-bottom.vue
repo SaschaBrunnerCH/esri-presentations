@@ -1,3 +1,7 @@
+<script setup>
+import SessionFeedback from './components/SessionFeedback.vue';
+</script>
+
 <template>
   <img
     alt=""
@@ -13,11 +17,7 @@
     src="https://raw.githubusercontent.com/Esri/reveal.js/refs/tags/dev-summit-2026/images/2026/dev/03.jpg"
     v-show="$frontmatter.layout === 'intro'"
   />
-  <img
-    alt='Please share your feedback in the app: 1. Select "My Event" in the event app main menu. 2. Select "My Surveys". 3. Select the desired survey. 4. Complete the survey'
-    src="https://raw.githubusercontent.com/Esri/reveal.js/refs/tags/dev-summit-2026/images/2026/dev/05.jpg"
-    v-show="$frontmatter.is === 'feedback'"
-  />
+  <SessionFeedback v-if="$frontmatter.is === 'feedback'" />
   <img
     alt=""
     src="https://raw.githubusercontent.com/Esri/reveal.js/refs/tags/dev-summit-2026/images/2026/dev/03.jpg"

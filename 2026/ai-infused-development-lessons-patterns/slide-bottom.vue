@@ -1,4 +1,5 @@
 <script setup>
+import SessionFeedback from '../.meta/components/SessionFeedback.vue';
 import mapCover from './assets/eudts-2026/map-cover.png';
 import coverArt from './assets/eudts-2026/art-cover.png';
 import sectionArt from './assets/eudts-2026/art-section.png';
@@ -34,6 +35,7 @@ import nativeContent from './assets/native-sdk/background-content.png';
     ESRI EUROPEAN DEVELOPER &amp;<br />TECHNOLOGY SUMMIT 2026
     <small>Copyright © 2026 Esri. All rights reserved.</small>
   </div>
+  <SessionFeedback v-if="$frontmatter.is === 'feedback'" />
 </template>
 
 <style>

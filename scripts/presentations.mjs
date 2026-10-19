@@ -14,4 +14,16 @@ export const presentations = [
       { slide: 15, clicks: 7 },
     ],
   },
+  {
+    path: '2026/3d-gis-3d-object-layer',
+    title: '3D GIS: Working with the 3D Object Layer',
+    videos: [
+      { slide: 6, clicks: 1 },
+      { slide: 7, clicks: 1 },
+      { slide: 25, clicks: 3 },
+      { slide: 33, clicks: 2 },
+      { slide: 35, clicks: 2 },
+      { slide: 39, clicks: 2 },
+    ],
+  },
 ];

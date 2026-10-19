@@ -1,0 +1,150 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #173248;
+  background: #f5f7fa;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+main {
+  display: grid;
+  grid-template-columns: minmax(430px, 36%) 1fr;
+  height: 100dvh;
+}
+.code-panel {
+  padding: 26px;
+  overflow: auto;
+  border-right: 1px solid #b5c4d0;
+}
+h1 {
+  font-size: 32px;
+  margin: 0 0 12px;
+}
+p {
+  line-height: 1.45;
+}
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0 16px;
+}
+button {
+  font: inherit;
+  padding: 12px;
+  cursor: pointer;
+  border: 1px solid #6d8395;
+  background: white;
+  color: #173248;
+  border-radius: 4px;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #007ac2;
+  outline-offset: 3px;
+}
+#world[aria-pressed='true'] {
+  background: #9f2929;
+  border-color: #9f2929;
+  color: white;
+}
+#local[aria-pressed='true'] {
+  background: #1656a3;
+  border-color: #1656a3;
+  color: white;
+}
+#explanation {
+  min-height: 46px;
+}
+pre {
+  padding: 18px;
+  overflow: auto;
+  background: #102b3e;
+  color: #e1f4ff;
+  border-radius: 5px;
+  font:
+    15px/1.75 Consolas,
+    monospace;
+}
+.hint {
+  font-size: 14px;
+}
+button.coordinate {
+  padding: 1px 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  white-space: pre;
+  cursor: pointer;
+}
+button.coordinate.is-preview {
+  background: #ffdc62;
+  color: #102b3e;
+}
+#vertex-label {
+  position: absolute;
+  top: 76px;
+  left: 72px;
+  margin: 0;
+  padding: 8px 12px;
+  background: #ffdc62;
+  color: #102b3e;
+  border: 1px solid #173248;
+  border-radius: 4px;
+  pointer-events: none;
+}
+.code-links {
+  display: flex;
+  gap: 22px;
+  margin: 20px 0;
+}
+a {
+  color: #005e95;
+}
+footer {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.scene-panel {
+  position: relative;
+  min-width: 0;
+}
+#viewDiv {
+  width: 100%;
+  height: 100%;
+}
+#reset {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  box-shadow: 0 2px 8px #0002;
+}
+#status {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 55px;
+  background: white;
+  padding: 16px;
+  border: 1px solid #b5c4d0;
+}
+@media (max-width: 800px) {
+  main {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .scene-panel {
+    grid-row: 1;
+    height: 55dvh;
+    min-height: 320px;
+  }
+  .code-panel {
+    border: 0;
+    padding: 20px;
+  }
+}

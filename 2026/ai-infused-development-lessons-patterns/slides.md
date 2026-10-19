@@ -655,8 +655,20 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
 - Start with one small task and define success.
 - Give SDK and platform versions, layer schema, constraints and reference examples.
 - Run tests, check the app and review the results.
-- Save verified corrections in shared guidance, examples or checks. Share what works; hand over to Raul on limits, risks and responsible use.
+- Save verified corrections in shared guidance, examples or checks. Share what works; show the feedback reminder before handing over to Raul on limits, risks and responsible use.
 - The linked starter is my implementation of these patterns, separate from the reported Esri team examples. Reuse the mechanisms that fit your project.
 - Reveal the starter link on the sixth and final click, after the five steps.
 - Source cue: SYNTHESIS — ArcGIS GeoBIM, ArcGIS Pro and Web GIS SDK: clear tasks and checked results; Native SDK deck: context briefing and shared corrections.
+-->
+
+---
+layout: none
+is: feedback
+title: Feedback
+---
+
+<!--
+- Timing: 0:10.
+- Invite attendees to complete the session survey, then hand over to Raul.
+- Shared original Esri feedback artwork, also used in the Components and 3D Object Layer sessions.
 -->
