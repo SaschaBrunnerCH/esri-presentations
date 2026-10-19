@@ -305,7 +305,7 @@ clicks: 1
 
 <div class="native-subtitle">Business Analyst used agents for lint and TypeScript cleanup.</div>
 <div class="native-process cleanup-process" aria-label="Divide code cleanup into tasks, let agents make changes, then run checks and review">
-  <div v-click="1"><span>01 / SMALL TASKS</span><strong>Divide the work</strong><small>Clear scope + project rules</small></div>
+  <div v-click="1"><span>01 / SMALL TASKS</span><strong>Isolate each task</strong><small>One worktree + clear scope</small></div>
   <b v-click="2" aria-hidden="true">→</b>
   <div v-click="2"><span>02 / AI HELP</span><strong>Draft the fixes</strong><small>Separate parts of the code</small></div>
   <b v-click="3" aria-hidden="true">→</b>
@@ -319,6 +319,7 @@ clicks: 1
 - Timing: 0:45.
 - Business Analyst used several agents for lint and TypeScript cleanup.
 - The small-task workflow is a suggestion; run checks and review changes.
+- My starter uses one Git worktree per task so agents do not edit the same checkout.
 - Fewer errors do not prove correct app behavior; check that too.
 - Source cue: ESRI FEEDBACK — Business Analyst: agents addressed ESLint and TypeScript errors; the task split is illustrative.
 -->
@@ -346,6 +347,7 @@ clicks: 1
 - Define the visual goal and CPU, GPU and memory limits.
 - Keep the scene, camera, data and device the same.
 - A, B and C are examples; test the chosen candidate on harder scenes.
+- Give each parallel variant its own worktree and output; compare the same inputs.
 - Compare the image, frame time and resource use.
 - Source cue: ESRI FEEDBACK — ArcGIS Maps SDK for JavaScript: agents and performance tests explored Gaussian Splats and Accessor; the comparison rows are illustrative.
 -->
@@ -413,26 +415,49 @@ clicks: 1
 
 <div class="native-kicker">TEST / COVERAGE</div>
 
+<script setup>
+const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testing-poster.png`;
+</script>
+
 # Run the same task across environments.
 
-<div class="native-subtitle">One laptop, multiple browsers, devices and external test providers.</div>
-<div class="coverage-workstation" aria-label="Build up testing coverage from one Windows laptop to browsers, Linux, connected mobile devices and external test providers, then reveal Playwright for browser automation">
-  <img v-click src="/diagrams/test-coverage-laptop.svg" alt="Windows laptop running Chrome" />
-  <img v-click src="/diagrams/test-coverage-firefox.svg" alt="Firefox added on the Windows laptop" />
-  <img v-click src="/diagrams/test-coverage-wsl.svg" alt="WSL Linux checks added on the same laptop" />
-  <img v-click src="/diagrams/test-coverage-devices.svg" alt="Android phone and iPad connected by USB or Wi-Fi" />
-  <img v-click src="/diagrams/test-coverage-providers.svg" alt="BrowserStack and TestingBot added as external test providers" />
-  <div v-click="6" class="coverage-playwright"><img src="./assets/brand/playwright-logo.svg" alt="Playwright" /><span>Playwright</span></div>
+<div class="native-subtitle">Record where the browser runs and what the result proves.</div>
+<div class="coverage-demo-grid">
+  <div>
+    <div class="coverage-workstation" aria-label="Possible coverage: Windows browsers, WSL, connected devices and external providers">
+      <img v-click="1" src="/diagrams/test-coverage-laptop.svg" alt="Windows laptop running Chrome" />
+      <img v-click="2" src="/diagrams/test-coverage-firefox.svg" alt="Firefox added on the Windows laptop" />
+      <img v-click="3" src="/diagrams/test-coverage-wsl.svg" alt="WSL Linux checks added on the same laptop" />
+      <img v-click="4" src="/diagrams/test-coverage-devices.svg" alt="Android phone and iPad connected by USB or Wi-Fi" />
+      <img v-click="5" src="/diagrams/test-coverage-providers.svg" alt="BrowserStack and TestingBot added as external test providers" />
+      <div v-click="6" class="coverage-playwright"><img src="./assets/brand/playwright-logo.svg" alt="Playwright" /><span>Playwright</span></div>
+    </div>
+    <div v-click="4" class="coverage-evidence">
+      <strong>Emulation ≠ a real device</strong>
+      <span>Browser + OS + device + result</span>
+      <span>Graphics work: verify the renderer too.</span>
+    </div>
+  </div>
+  <figure v-click="7" class="device-demo">
+    <div class="device-demo-player">
+      <SlidevVideo v-if="$clicks >= 7" autoplay="once" autoreset="slide" controls muted playsinline preload="metadata" :poster="deviceVideoPoster" aria-label="Browser and device testing setup">
+        <source src="/media/browser-device-testing.mp4" type="video/mp4" />
+      </SlidevVideo>
+    </div>
+  </figure>
 </div>
 
 <div class="cycle-step stage-test" aria-label="Current development stage: 05 TEST">05 TEST</div>
 
 <!--
 - Timing: 1:25.
-- Possible setup: run the same task across browsers, systems and real devices.
-- Playwright can automate browser tasks; an agent can collect screenshots and logs.
-- Record the environment for each result; mark untested targets as not run.
-- Source cue: ILLUSTRATION — Proposed browser/device coverage; general engineering feedback supports agents testing user tasks.
+- Reveal the coverage diagram in six clicks. The seventh and final click reveals and starts the video beside it.
+- The recording shows browser and device testing with agentic-starter-ts. Desktop browsers are visible for the demonstration; routine desktop automation is headless.
+- Built-in local browser automation, documented real-device setup and separate provider integrations are different paths.
+- A phone-sized desktop viewport is emulation; it does not prove a real phone passed. Playwright WebKit is not shipping Safari.
+- Record browser, rendering OS, device and result; verify the actual renderer for graphics claims. WSL and native Windows are separate results.
+- The clip shows the setup, not a passing suite on every device. Mark untested targets as not run.
+- Source cue: MY EXAMPLE — agentic-starter-ts browser/device setup recording, 18 October 2026; the coverage diagram remains illustrative.
 -->
 
 ---
@@ -486,17 +511,22 @@ clicks: 1
   <ul class="native-lines">
     <li v-click="1"><strong>Skill: instructions</strong></li>
     <li v-click="2"><strong>Tool: runs a task</strong></li>
-    <li v-click="3"><strong>Package once, reuse</strong><small>Across tasks and sessions</small></li>
+    <li v-click="3"><strong>Gate: required checks</strong><small>Same command locally + CI</small></li>
   </ul>
-  <div v-click="4" class="native-code-wrap">
-    <div class="native-code-label">ILLUSTRATIVE REVIEW SKILL</div>
-    <pre class="native-code"><span>1.</span> Read the project rules
-<span>2.</span> Check the change + callers
-<span>3.</span> Call check tool; stop on failure
-<span>4.</span> Report results for review</pre>
+  <div v-click="4" class="guardrail-example">
+    <div class="native-code-label">MY STARTER / ONE CHECK COMMAND</div>
+    <code>pnpm check:push</code>
+    <table aria-label="Examples of rules and their enforcement">
+      <thead><tr><th>Rule</th><th>Mechanism</th></tr></thead>
+      <tbody>
+        <tr><td>Format + build</td><td>Automated gate</td></tr>
+        <tr><td>Allow a merge</td><td>Checks + owner's yes</td></tr>
+        <tr><td>Judge the result</td><td>Human review</td></tr>
+      </tbody>
+    </table>
   </div>
 </div>
-<div v-click="4" class="native-close">Enforce required checks with tools and CI.</div>
+<div v-click="4" class="native-close">A rule needs a mechanism.</div>
 <div class="cycle-step stage-maintain" aria-label="Current development stage: 07 MAINTAIN">07 MAINTAIN</div>
 
 <!--
@@ -504,6 +534,8 @@ clicks: 1
 - A skill gives instructions; a tool runs a task.
 - Teams use skills for code and checks; saving time and tokens is a recommendation.
 - Call the check tool, report results and stop on failure; tools and CI enforce required checks.
+- My starter runs pnpm check:push before pushing and in PR CI from one shared list. It includes formatting, types, tests and the build; browser acceptance is separate evidence.
+- The table is a simplified presenter example from my starter, not a claim about Esri teams' enforcement.
 - Source cue: ESRI FEEDBACK — Web GIS SDK / ArcGIS Pro: reusable skills and tools; general engineering feedback recommends them for speed, token savings and reproducibility.
 -->
 
@@ -524,6 +556,7 @@ clicks: 1
 - Documentation search helps the agent find guidance.
 - Review the test plan, use test data and set a time limit.
 - Follow the guide in the app; fix the guide or software when they differ.
+- Keep lasting findings and decisions in tracked documentation so the next checkout can recover the reasons without the chat.
 - Source cue: ESRI FEEDBACK — Web GIS SDK documentation search; general engineering guidance recommends writing docs with code and testing their steps.
 -->
 
@@ -550,7 +583,7 @@ clicks: 1
     <div><span>Next</span><strong>Test feature selection</strong></div>
   </div>
 </div>
-<div v-click="2" class="native-close">Save the record. Read it before continuing. Check the decision.</div>
+<div v-click="2" class="native-close">Handoffs save state. Tracked decisions preserve the reasons.</div>
 <div class="cycle-step stage-maintain" aria-label="Current development stage: 07 MAINTAIN">07 MAINTAIN</div>
 
 <!--
@@ -558,6 +591,8 @@ clicks: 1
 - Shortening the conversation can make the agent forget an agreed decision.
 - Save the goal, decisions, work done, check results and next step.
 - Read the record before continuing and check that the decision still holds.
+- A handoff is temporary task state. Lasting decisions and their rationale belong in tracked docs or an Architecture Decision Record (ADR).
+- Verify the recorded commit, checks and approvals against live state before resuming; a handoff is not fresh evidence.
 - The access-rule example is illustrative; the record helps but gives no guarantee.
 - Source cue: ESRI FEEDBACK — General engineering experience: save progress and reread it after context compression or a focused handover; the access-rule example is illustrative.
 -->
@@ -608,10 +643,14 @@ clicks: 1
   <li v-click="5"><span>5</span><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="27" cy="27" r="17" fill="none" stroke="currentColor" stroke-width="3"/><path d="m40 40 16 16m-38-29 6 6 12-14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Review results</strong><small>Evidence and next step</small></li>
 </ol>
 
+<div v-click="6" class="starter-resource"><span>MY PRACTICAL STARTING POINT</span><a href="https://github.com/SaschaBrunnerCH/agentic-starter-ts" target="_blank" rel="noopener noreferrer">github.com/SaschaBrunnerCH/agentic-starter-ts ↗</a></div>
+
 <!--
 - Timing: 0:45.
 - Start with one small task; define success and give the agent relevant context.
 - Run tests, check the app and review the results.
 - Record what works; hand over to Raul on limits, risks and responsible use.
+- The linked starter is my implementation of these patterns, separate from the reported Esri team examples. Reuse the mechanisms that fit your project.
+- Reveal the starter link on the sixth and final click, after the five steps.
 - Source cue: SYNTHESIS — ArcGIS GeoBIM, ArcGIS Pro and Web GIS SDK: clear tasks, context, checks and reviewed results.
 -->

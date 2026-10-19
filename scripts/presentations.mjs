@@ -9,6 +9,9 @@ export const presentations = [
   {
     path: '2026/ai-infused-development-lessons-patterns',
     title: 'AI across the development cycle',
-    videos: [{ slide: 9, clicks: 1 }],
+    videos: [
+      { slide: 9, clicks: 1 },
+      { slide: 15, clicks: 7 },
+    ],
   },
 ];
