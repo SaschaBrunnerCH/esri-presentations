@@ -40,6 +40,7 @@ From the repository root:
 ```sh
 pnpm run lint
 pnpm run format
+pnpm run check
 ```
 
 `lint` checks formatting with Prettier; it does not run ESLint. In each TypeScript
@@ -48,6 +49,27 @@ the presentation or demo directory to create its production build.
 
 After initializing Git, run `pnpm run prepare` to install the staged-file
 formatting hook. Git 2.32 or later is required.
+
+`pnpm run check` runs formatting, local Markdown link-target checks and both
+production deck builds from one shared list. The PR validation and Pages build
+use the same command. It writes the complete presentation site to `dist/`.
+Set `PAGES_BASE_PATH=/esri-presentations` to build for the GitHub Pages project
+path; the default serves the index at the domain root.
+
+After building, check the site locally:
+
+```sh
+pnpm exec playwright install chromium
+pnpm exec vite preview --host 127.0.0.1 --port 4173 --strictPort
+# In another terminal:
+pnpm run check:site http://127.0.0.1:4173/
+```
+
+The browser smoke check loads the index and both decks, checks images and plays
+a frame of each AI-deck video. It disables Slidev's keep-screen-awake preference
+for its headless session. It checks functional loading and media decoding;
+it does not establish GPU or physical-device acceptance. Markdown link checks
+check local file targets, not external URLs or heading anchors.
 
 ## Source and licence
 
@@ -62,3 +84,7 @@ licence preserved with the presentation.
 [Deploy workflow](.github/workflows/deploy.yml) builds both presentations and publishes
 them on pushes to `main`. It can also be started manually from GitHub Actions.
 The site includes a presentation index; demo source code remains in the repository.
+Pull requests run [presentation checks](.github/workflows/check.yml) without
+publishing. After a Pages deployment, a separate browser smoke check tests the
+published index, decks and videos. A failed smoke check marks the workflow red
+and leaves the deployed version online; it does not automatically roll back.
