@@ -90,7 +90,7 @@ preloadImages: false
     <div class="native-code-wrap"><div class="native-code-label">ILLUSTRATIVE SCENARIO</div><pre class="native-code"><span>Given</span> an accessible Web Scene
 <span>When</span> I select a feature
 <span>Then</span> its details appear</pre></div>
-    <small>Same scenarios for tests and review.</small>
+    <small>Small phases: build → test → review → repeat.</small>
   </div>
   <div v-click="2" class="lesson-panel lesson-caution">
     <span class="lesson-label">ARCHITECTURE OPTIONS</span>
@@ -104,9 +104,11 @@ preloadImages: false
 - Timing: 1:20.
 - Requirement: the user goal. Specification: behavior we can build and test.
 - Developer and product engineer approve scenarios; reuse them in tests and review.
+- Build one small phase, test it against the scenario, review the result, then continue.
+- Ask AI to propose edge cases and test data: empty selection, inaccessible layers and missing attributes. Review the proposals before using them.
 - Quick prototypes let us compare more architecture options.
 - Agreement takes time; choose the approach together and write it down.
-- Source cue: ESRI FEEDBACK — ArcGIS GeoBIM: reuse approved scenarios in QA and review; the architecture lesson is presenter experience.
+- Source cue: SYNTHESIS — ArcGIS GeoBIM: approved scenarios for QA and review; Native SDK deck: small phases and test design; architecture agreement is presenter experience.
 -->
 
 ---
@@ -115,7 +117,7 @@ preloadImages: false
 
 # Codebase exploration
 
-<div class="native-subtitle">Ask AI to explain how the app works.</div>
+<div class="native-subtitle">Give context: SDK version, Online/Enterprise, schema and constraints.</div>
 <div class="native-grid prd-grid">
   <div v-click="1" class="prd-stages" aria-label="Investigate user tasks, code and project rules">
     <div class="prd-stage"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="5" y="10" width="54" height="44" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><path d="M5 21h54M22 40l7 7 14-17" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>User tasks</strong></div>
@@ -140,10 +142,11 @@ preloadImages: false
 <!--
 - Timing: 1:05.
 - Ask about user tasks, code and project rules.
+- Brief the agent with SDK and platform versions, layer schema, deployment constraints and a reference example. Ask it to identify missing context.
 - Ask for an explanation, code links and open questions.
 - Check it in the running app and against current SDK guidance.
 - Know what to keep and where to work.
-- Source cue: ESRI FEEDBACK — ArcGIS Pro / Web GIS SDK: code discovery, project guidance and documentation search.
+- Source cue: SYNTHESIS — ArcGIS Pro / Web GIS SDK: code discovery and project guidance; Native SDK deck: concrete technical context.
 -->
 
 ---
@@ -195,7 +198,7 @@ preloadImages: false
   <div v-click class="ui-option"><div class="ui-option-label">B · GUIDED</div><div class="ui-frame"><div class="ui-bar"></div><div class="ui-map"><i></i></div><div class="ui-hint">Select a feature</div></div><p>More cues for a first visit</p></div>
   <div v-click class="ui-option"><div class="ui-option-label">C · POWER USER</div><div class="ui-frame"><div class="ui-bar"></div><div class="ui-map"><i></i></div><div class="ui-controls"><b></b><b></b><b></b></div></div><p>More control, more complexity</p></div>
 </div>
-<div v-click="-1" class="native-close">Choose by observed behavior, not by prototype speed.</div>
+<div v-click="-1" class="native-close">Ask AI: “What assumptions could make each option fail?”<br />Choose by observed behavior.</div>
 
 <div class="cycle-step stage-design" aria-label="Current development stage: 03 DESIGN">03 DESIGN</div>
 
@@ -203,8 +206,9 @@ preloadImages: false
 - Timing: 0:55.
 - Web GIS SDK engineers report making more UI prototypes with AI.
 - The three flows are examples; compare the same user task.
+- Ask AI to challenge each option's assumptions. Check its critique against the user task and observed behavior.
 - Choose useful behavior and add it to the plan.
-- Source cue: ESRI FEEDBACK — Web GIS SDK: create several quick UI prototypes to compare options.
+- Source cue: SYNTHESIS — Web GIS SDK: compare quick UI prototypes; Native SDK deck: ask AI to challenge a proposal.
 -->
 
 ---
@@ -583,7 +587,7 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
     <div><span>Next</span><strong>Test feature selection</strong></div>
   </div>
 </div>
-<div v-click="2" class="native-close">Handoffs save state. Tracked decisions preserve the reasons.</div>
+<div v-click="2" class="native-close">Review → correct → save → share.<br /><small>Keep verified lessons in project rules, examples or checks.</small></div>
 <div class="cycle-step stage-maintain" aria-label="Current development stage: 07 MAINTAIN">07 MAINTAIN</div>
 
 <!--
@@ -592,9 +596,10 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
 - Save the goal, decisions, work done, check results and next step.
 - Read the record before continuing and check that the decision still holds.
 - A handoff is temporary task state. Lasting decisions and their rationale belong in tracked docs or an Architecture Decision Record (ADR).
+- After a verified correction, update a shared project rule, example or reusable check. Future sessions can use that guidance; this does not retrain the model.
 - Verify the recorded commit, checks and approvals against live state before resuming; a handoff is not fresh evidence.
 - The access-rule example is illustrative; the record helps but gives no guarantee.
-- Source cue: ESRI FEEDBACK — General engineering experience: save progress and reread it after context compression or a focused handover; the access-rule example is illustrative.
+- Source cue: SYNTHESIS — General engineering experience: resumable progress records; Native SDK deck: review, correct, save and share. The access-rule example is illustrative.
 -->
 
 ---
@@ -638,19 +643,20 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
 <ol class="first-task-steps" aria-label="Five steps to start using AI on a development task">
   <li v-click="1"><span>1</span><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="9" width="40" height="48" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><path d="M23 22h18m-18 10h18m-18 10h12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg><strong>Choose a task</strong><small>One useful change</small></li>
   <li v-click="2"><span>2</span><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="3"/><path d="m19 33 9 9 18-21" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Define success</strong><small>Expected behavior</small></li>
-  <li v-click="3"><span>3</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 12c11-4 20-2 24 2 4-4 13-6 24-2v39c-11-4-20-2-24 2-4-4-13-6-24-2zM32 14v39M15 24h10m14 0h10M15 34h10m14 0h10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Give context</strong><small>Code, rules, examples</small></li>
+  <li v-click="3"><span>3</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 12c11-4 20-2 24 2 4-4 13-6 24-2v39c-11-4-20-2-24 2-4-4-13-6-24-2zM32 14v39M15 24h10m14 0h10M15 34h10m14 0h10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Give context</strong><small>Versions, schema, constraints</small></li>
   <li v-click="4"><span>4</span><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="5" y="10" width="54" height="44" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><path d="M5 21h54m-39 18 9 8 17-20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Run checks</strong><small>Tests and running app</small></li>
-  <li v-click="5"><span>5</span><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="27" cy="27" r="17" fill="none" stroke="currentColor" stroke-width="3"/><path d="m40 40 16 16m-38-29 6 6 12-14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Review results</strong><small>Evidence and next step</small></li>
+  <li v-click="5"><span>5</span><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="27" cy="27" r="17" fill="none" stroke="currentColor" stroke-width="3"/><path d="m40 40 16 16m-38-29 6 6 12-14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Review results</strong><small>Save verified lessons</small></li>
 </ol>
 
 <div v-click="6" class="starter-resource"><span>MY PRACTICAL STARTING POINT</span><a href="https://github.com/SaschaBrunnerCH/agentic-starter-ts" target="_blank" rel="noopener noreferrer">github.com/SaschaBrunnerCH/agentic-starter-ts ↗</a></div>
 
 <!--
 - Timing: 0:45.
-- Start with one small task; define success and give the agent relevant context.
+- Start with one small task and define success.
+- Give SDK and platform versions, layer schema, constraints and reference examples.
 - Run tests, check the app and review the results.
-- Record what works; hand over to Raul on limits, risks and responsible use.
+- Save verified corrections in shared guidance, examples or checks. Share what works; hand over to Raul on limits, risks and responsible use.
 - The linked starter is my implementation of these patterns, separate from the reported Esri team examples. Reuse the mechanisms that fit your project.
 - Reveal the starter link on the sixth and final click, after the five steps.
-- Source cue: SYNTHESIS — ArcGIS GeoBIM, ArcGIS Pro and Web GIS SDK: clear tasks, context, checks and reviewed results.
+- Source cue: SYNTHESIS — ArcGIS GeoBIM, ArcGIS Pro and Web GIS SDK: clear tasks and checked results; Native SDK deck: context briefing and shared corrections.
 -->
