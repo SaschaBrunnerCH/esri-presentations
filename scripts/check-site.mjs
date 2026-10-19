@@ -24,8 +24,15 @@ try {
   const errors = [];
   page.on('pageerror', (error) => errors.push(error.message));
   page.on('response', (response) => {
-    if (response.url().startsWith(base.href) && response.status() >= 400) {
+    if (!response.url().startsWith(base.href)) return;
+    if (response.status() >= 400) {
       errors.push(`${response.status()} ${response.url()}`);
+    } else if (
+      response.request().resourceType() === 'image' &&
+      response.headers()['content-type']?.startsWith('text/html')
+    ) {
+      // Preview servers can return the SPA HTML for a missing image with 200.
+      errors.push(`Image request returned HTML: ${response.url()}`);
     }
   });
   const index = await page.goto(base.href, { waitUntil: 'load' });

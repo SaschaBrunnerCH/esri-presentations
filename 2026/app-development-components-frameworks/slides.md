@@ -5,6 +5,8 @@ author: Stefan Schläfli, Sascha Brunner
 mdc: true
 colorSchema: light
 layout: cover
+# Vite bundles image paths; Slidev's raw-path preloader cannot resolve them.
+preloadImages: false
 ---
 
 ## ArcGIS Maps SDK for JavaScript:<br>App Development with Components<br>– Using Frameworks
