@@ -1,8 +1,8 @@
 # ArcGIS Maps SDK for JavaScript: App Development with Components – Using Frameworks
 
 Join us for the second technical session in a four-part series on building
-applications with the ArcGIS Maps SDK for JavaScript. Speakers begin with
-exploring motivations for using front-end frameworks and then cover techniques
+applications with the ArcGIS Maps SDK for JavaScript. The session begins by
+exploring motivations for using front-end frameworks and then covers techniques
 for integrating the SDK's web components with frameworks and tools such as React
 and Vite. The session touches on current front-end methodologies for topics such
 as dependency management, asset management, semantic versioning, prebuilt versus
@@ -13,7 +13,7 @@ When: Wednesday, 21 October 2026 | 10:30–11:30 CEST
 
 Where: Harmonie Hall A–C, Level C2 | Congress Center
 
-Presenters: Stefan Schläfli & Sascha Brunner
+Presenter: Sascha Brunner
 
 [Esri European Developer & Technology Summit 2026 session](https://registration.esri.com/flow/esri/26euroepcdev/deveventportal/page/detailed-agenda/session/1785494727635001W1Oa)
 

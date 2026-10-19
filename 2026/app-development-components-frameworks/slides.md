@@ -1,7 +1,9 @@
 ---
 titleTemplate: '%s'
 title: 'ArcGIS Maps SDK for JavaScript: App Development with Components – Using Frameworks'
-author: Stefan Schläfli, Sascha Brunner
+author: Sascha Brunner
+duration: 45min
+timer: countdown
 mdc: true
 colorSchema: light
 layout: cover
@@ -11,7 +13,7 @@ preloadImages: false
 
 ## ArcGIS Maps SDK for JavaScript:<br>App Development with Components<br>– Using Frameworks
 
-Stefan Schläfli · Sascha Brunner
+Sascha Brunner
 
 <!--
 - One app, five stages: HTML → Vite → React → TypeScript → extracted component.
@@ -34,8 +36,6 @@ is: feedback
 
 **Wednesday, 21 October · 09:00–10:00 CEST**  
 Harmonie Hall A–C, Level C2 · Congress Center
-
-**Speakers:** Stefan Schläfli · Julie Powell
 
 - Core concepts and programming patterns for SDK web components
 - Map and scene components, including functionality from legacy widgets
@@ -61,7 +61,7 @@ Second of four sessions · Wednesday, 21 October · All times CEST
 | 13:00–14:00     | [User Experience](https://registration.esri.com/flow/esri/26euroepcdev/deveventportal/page/detailed-agenda/session/1785494866247001NFxW)                     |
 | 14:30–15:30     | [Extending and Styling](https://registration.esri.com/flow/esri/26euroepcdev/deveventportal/page/detailed-agenda/session/1785495003196001fwKB)               |
 
-Today: Calcite, ArcGIS Maps SDK for JavaScript, bundlers, and frameworks.
+**Our route:** HTML → Vite → React → TypeScript → component
 
 AI-assisted coding: understand the project, guide changes, verify results.
 
@@ -228,7 +228,7 @@ url: https://developers.arcgis.com/javascript/latest/get-started/
 
 ---
 
-# index.html demo
+# Demo: HTML and CDN
 
 Start with the HTML app from the previous session.
 
@@ -484,11 +484,11 @@ After the build, verify behavior: select a trail → profile → clear selection
 
 ---
 
-# Fun fact
+# From build tools to app structure
 
-These slides are built with Vite. ✨
+These slides use Vite through [Slidev](https://sli.dev/).
 
-(with help from [Slidev](https://sli.dev/))
+Next: organize UI state and rendering with React.
 
 <!--
 - These slides use Vite through Slidev.
@@ -534,8 +534,7 @@ layout: intro
   - JSX syntax, which is a mix of JavaScript and HTML
   - TSX: JSX in TypeScript files (`.tsx`)
 - Easy state management with "hooks"
-- Components re-render when state changes, so no need for query selectors or
-  manual DOM manipulation
+- State drives rendered UI, reducing manual DOM wiring in this app
 - React 19 has support for web components out of the box
 
 <!--
@@ -654,7 +653,7 @@ graph TD
 - Declarative rendering
 - Easy to pass properties to components
 - Easier event logic
-- No need for query selectors
+- Less manual DOM wiring in this app
 - Easy to consume web components
 
 <!--
@@ -815,6 +814,7 @@ pnpm run dev
 ```
 
 <!--
+- If editor diagnostics are unavailable, run `pnpm run typecheck`.
 1. Open `demo/3-typescript`: `package.json`, `tsconfig.json`, and `src/vite-env.d.ts`.
 2. In `src/App.tsx`, hover `popupDockOptions: DockOptions`.
 3. Add an unknown property; show the diagnostic; undo the edit.
@@ -846,8 +846,8 @@ pnpm run dev
 
 - Application logic can be encapsulated into smaller components
 - This makes it easier to manage and reason about the code
-- For example, we can create a new component for the elevation profile logic in
-  our app
+- **App:** owns the selected trail
+- **ElevationProfilePanel:** owns the profile display, statistics, and event handler
 
 **Demo:** `demo/4-typescript-react-encapsulation`
 
@@ -883,23 +883,31 @@ pnpm run dev
 
 ---
 
-# Continue the series this afternoon
+# Recap and next sessions
 
-**Wednesday, 21 October · Harmonie Hall D–E, Level C2 · Congress Center**
-
-### [User Experience](https://registration.esri.com/flow/esri/26euroepcdev/deveventportal/page/detailed-agenda/session/1785494866247001NFxW)
-
-**13:00–14:00 CEST · Keith Morrison**
-
-Build the user experience with SDK components and Calcite Design System.
-
-### [Extending and Styling](https://registration.esri.com/flow/esri/26euroepcdev/deveventportal/page/detailed-agenda/session/1785495003196001fwKB)
-
-**14:30–15:30 CEST · Keith Morrison**
-
-Explore branding, theming, and customization strategies for your apps.
+<div class="closing-grid">
+  <section>
+    <h3>One app, five steps</h3>
+    <dl class="closing-recap">
+      <dt>HTML</dt><dd>A working starting point</dd>
+      <dt>Vite</dt><dd>Development server and build</dd>
+      <dt>React</dt><dd>State drives the interface</dd>
+      <dt>TypeScript</dt><dd>Feedback while writing code</dd>
+      <dt>Component</dt><dd>Related behavior in one place</dd>
+    </dl>
+  </section>
+  <section class="closing-sessions">
+    <h3>Continue this afternoon</h3>
+    <p class="closing-location">Wednesday, 21 October<br />Harmonie Hall D–E · Level C2</p>
+    <h4><a href="https://registration.esri.com/flow/esri/26euroepcdev/deveventportal/page/detailed-agenda/session/1785494866247001NFxW">User Experience</a></h4>
+    <p>13:00–14:00 CEST · Keith Morrison</p>
+    <h4><a href="https://registration.esri.com/flow/esri/26euroepcdev/deveventportal/page/detailed-agenda/session/1785495003196001fwKB">Extending and Styling</a></h4>
+    <p>14:30–15:30 CEST · Keith Morrison</p>
+  </section>
+</div>
 
 <!--
+- Closing order: 40 → 42 → 43 → 44 → 41.
 - Vite: development and build tooling.
 - React: UI updates driven by state.
 - TypeScript: editor feedback.

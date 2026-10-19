@@ -172,3 +172,42 @@
   font-size: 13px;
   line-height: 1.5;
 }
+
+.closing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  margin-top: 28px;
+}
+.closing-grid h3 {
+  font-size: 23px;
+  margin: 0 0 20px;
+}
+.closing-recap {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px 16px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+.closing-recap dt {
+  font-weight: 700;
+  color: #c0e8ff;
+}
+.closing-recap dd {
+  margin: 0;
+}
+.closing-sessions .closing-location {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0 0 24px;
+  opacity: 0.8;
+}
+.closing-sessions h4 {
+  font-size: 20px;
+  margin: 20px 0 4px;
+}
+.closing-sessions p {
+  font-size: 16px;
+  margin: 0;
+}
