@@ -1,5 +1,5 @@
 import { spawnSync } from 'node:child_process';
-import { copyFileSync, mkdirSync, rmSync } from 'node:fs';
+import { copyFileSync, cpSync, mkdirSync, rmSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { presentations, repositoryRoot } from './presentations.mjs';
 
@@ -34,3 +34,6 @@ copyFileSync(
   resolve(repositoryRoot, 'site/index.html'),
   resolve(output, 'index.html'),
 );
+cpSync(resolve(repositoryRoot, 'site/assets'), resolve(output, 'assets'), {
+  recursive: true,
+});

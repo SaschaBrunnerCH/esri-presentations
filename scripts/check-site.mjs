@@ -37,11 +37,23 @@ try {
   });
   const index = await page.goto(base.href, { waitUntil: 'load' });
   assert(index?.ok(), 'Presentation index must load.');
+  await page.waitForFunction(() =>
+    [...document.images].every(
+      (image) => image.complete && image.naturalWidth > 0,
+    ),
+  );
   for (const presentation of presentations) {
     assert.equal(
       await page.locator(`a[href="./${presentation.path}/"]`).count(),
       1,
       `Index must link to ${presentation.path}`,
+    );
+    assert.equal(
+      await page
+        .locator(`a[href="./${presentation.path}/#/presenter/1"]`)
+        .count(),
+      1,
+      `Index must link to presenter mode for ${presentation.path}`,
     );
   }
   for (const presentation of presentations) {
