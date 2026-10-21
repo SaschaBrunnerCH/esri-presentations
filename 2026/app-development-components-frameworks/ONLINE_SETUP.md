@@ -104,8 +104,8 @@ printed by the startup helper manually.
 | File selection            | Coverage                                             | Tabs                                     |
 | ------------------------- | ---------------------------------------------------- | ---------------------------------------- |
 | `--section foundations`   | Slides 1–24: HTML, Vite, dependencies, build, assets | 9 after building; 7 without build output |
-| `--section frameworks`    | Slides 25–39: React, TypeScript, encapsulation       | 14; no build needed                      |
-| `--section all` (default) | Both groups in demonstration order                   | 23 after building                        |
+| `--section frameworks`    | Slides 25–39: React, TypeScript, encapsulation       | 15; no build needed                      |
+| `--section all` (default) | Both groups in demonstration order                   | 24 after building                        |
 
 - **App unavailable:** check the Codespace is running, rerun the startup helper,
   and confirm its port is forwarded. Logs are in `~/.cache/esri-framework-demos/`,
@@ -120,7 +120,8 @@ printed by the startup helper manually.
   Without a Codespace name, either launcher opens 13 tabs including the dashboard.
 - **TypeScript diagnostics:** open `demo/3-typescript/src/App.tsx` and the Problems
   panel. Compare it with `demo/4-typescript-react-encapsulation/src/App.tsx`
-  for encapsulation.
+  for encapsulation, then open the extracted
+  `demo/4-typescript-react-encapsulation/src/ElevationProfilePanel.tsx`.
 
 | Action             | Windows        | macOS         |
 | ------------------ | -------------- | ------------- |

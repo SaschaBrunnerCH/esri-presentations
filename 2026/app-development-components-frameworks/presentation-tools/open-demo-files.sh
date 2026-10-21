@@ -82,6 +82,7 @@ if [[ "$section" != foundations ]]; then
     "$demo_dir/3-typescript/src/App.tsx"
     "$demo_dir/4-typescript-react-encapsulation/README.md"
     "$demo_dir/4-typescript-react-encapsulation/src/App.tsx"
+    "$demo_dir/4-typescript-react-encapsulation/src/ElevationProfilePanel.tsx"
   )
 fi
 

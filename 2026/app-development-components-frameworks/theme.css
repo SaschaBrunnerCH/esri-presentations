@@ -121,19 +121,23 @@
 /* Keep comparison snippets readable without horizontal scrolling. */
 .slidev-layout:has(> .code-comparison) {
   gap: 24px;
+  grid-template-columns: 0.85fr 1.15fr;
+  --slidev-code-font-size: 12px;
+  --slidev-code-line-height: 1.1;
+}
+.slidev-layout:has(> .code-comparison) > div {
+  min-width: 0;
 }
 .slidev-layout:has(> .code-comparison) h1 {
   font-size: 30px;
 }
 .slidev-layout:has(> .code-comparison) h3 {
   font-size: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
-.slidev-layout:has(> .code-comparison) pre {
-  font-size: 13px;
-  line-height: 1.5;
+.slidev-layout:has(> .code-comparison) pre code {
+  line-height: inherit;
 }
-
 .closing-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

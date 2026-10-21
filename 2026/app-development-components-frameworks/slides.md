@@ -670,53 +670,59 @@ class: code-comparison
 
 # Vanilla JavaScript
 
-### Find elements
+### HTML
 
-```js
-const profile = document.querySelector(
-  'arcgis-elevation-profile'
-);
-const chip = document.querySelector(
-  '#distance'
-);
-```
-
-### Update the DOM
-
-```js
-chip.textContent = distance;
+```html
+<body>
+  <calcite-chip id="distance"></calcite-chip>
+  <calcite-chip id="elevation"></calcite-chip>
+  <arcgis-map
+    id="map"
+    item-id="a2a490fe264c4363b4fa2981d03f43f5"
+    ground="world-elevation"
+  ></arcgis-map>
+  <arcgis-elevation-profile
+    reference-element="map"
+  ></arcgis-elevation-profile>
+</body>
 ```
 
 ::right::
 
-### Watch analysis progress
+### JavaScript
 
 ```js
-const analysisView =
-  await view.whenAnalysisView(
-    profile.analysis
-  );
-watch(
-  () => analysisView.progress,
-  (progress) => {
-    if (progress !== 1
-      || !profile.feature) return;
+const profile = document.querySelector(
+  'arcgis-elevation-profile');
+const distance = document.getElementById('distance');
+const elevation = document.getElementById('elevation');
+
+profile.addEventListener(
+  'arcgisPropertyChange', async (event) => {
+    if (event.detail.name !== 'progress'
+      || profile.progress !== 1) return;
+    const view = profile.view;
+    if (!view) return;
+    const analysisView = await view.whenAnalysisView(
+      profile.analysis);
     const stats = analysisView.statistics;
-    const value = stats?.maxDistance ?? 0;
-    const unit =
-      profile.effectiveDisplayUnits.distance;
-    chip.textContent =
-      `${value.toFixed(2)} ${unit}`;
+    const units = profile.effectiveDisplayUnits;
+    if (!stats || !units || !profile.feature) return;
+    distance.textContent =
+      `${round(stats.maxDistance)} ${units.distance}`;
+    elevation.textContent =
+      `${round(stats.elevationGain)} ${units.elevation}`;
   }
 );
 ```
 
 <!--
-- Distance-only excerpt; full demo also handles elevation and clearing selection.
-- Import `watch` from `@arcgis/core/core/reactiveUtils.js`.
-- Run setup inside an async function after the map view and profile component are ready.
-- `view` is the associated map view.
-- Follow: analysis progress → `analysisView.statistics` → update the existing chip.
+- Original comparison restored: HTML declares both chips and the map/profile; JavaScript finds elements, attaches an event listener, and updates both text nodes.
+- Run this after the declared elements and associated map view are ready; the surrounding app supplies the selected trail to `profile.feature`.
+- `round(value)` is the demo helper: `Math.round(((value ?? 0) + Number.EPSILON) * 100) / 100`.
+- Both slides filter the same component progress event and use the current `analysisView.statistics` and `effectiveDisplayUnits` APIs.
+- The full vanilla demo uses an analysis-progress watcher; this equivalent event-based excerpt restores the original comparison with React.
+- Selection, clearing, imports, and lifecycle setup remain in the full demo.
 -->
 
 ---
@@ -726,60 +732,59 @@ class: code-comparison
 
 # React
 
-### State and rendering
+### HTML
 
-```jsx
-const [distance, setDistance] =
-  useState('');
-
-return (
-  <>
-    {distance && (
-      <calcite-chip>
-        {distance}
-      </calcite-chip>
-    )}
-    <arcgis-elevation-profile
-      onarcgisPropertyChange={onChange}
-    />
-  </>
-);
+```html
+<body>
+  <div id="root"></div>
+</body>
 ```
+
+React renders the chips from state.
 
 ::right::
 
-### Handle the event
+### JSX
 
 ```jsx
+const [distance, setDistance] = useState('');
+const [elevation, setElevation] = useState('');
 async function onChange(event) {
   const profile = event.target;
   if (event.detail.name !== 'progress'
     || profile.progress !== 1) return;
   const view = profile.view;
   if (!view) return;
-  await view.when();
-  const analysisView =
-    await view.whenAnalysisView(
-      profile.analysis
-    );
-  if (!profile.feature) return;
-  const value =
-    analysisView.statistics?.maxDistance ?? 0;
-  const unit =
-    profile.effectiveDisplayUnits.distance;
+  const analysisView = await view.whenAnalysisView(
+    profile.analysis);
+  const stats = analysisView.statistics;
+  const units = profile.effectiveDisplayUnits;
+  if (!stats || !units || !profile.feature) return;
   setDistance(
-    `${value.toFixed(2)} ${unit}`
-  );
+    `${round(stats.maxDistance)} ${units.distance}`);
+  setElevation(
+    `${round(stats.elevationGain)} ${units.elevation}`);
 }
+return (
+  <>
+    {distance && <calcite-chip>{distance}</calcite-chip>}
+    {elevation && <calcite-chip>{elevation}</calcite-chip>}
+    <arcgis-elevation-profile
+      referenceElement="map"
+      feature={selectedGraphic}
+      onarcgisPropertyChange={onChange}
+    />
+  </>
+);
 ```
 
 <!--
-- Both excerpts belong inside the same React component; import `useState`.
-- The app connects the profile to the map and selected trail.
-- Follow: filter progress event → await analysis view → read statistics → update state.
-- Use `effectiveDisplayUnits` for the displayed unit.
-- The fragment groups the returned elements.
-- Distance-only excerpt; full demo also handles elevation and clearing selection.
+- Original comparison restored: the HTML only provides the root; React owns both state variables, the event handler, and conditional rendering of both chips.
+- This JSX belongs inside App; import `useState` and mount App at `root` with `createRoot`, as shown in `demo/2-react/src/main.jsx`.
+- Use the same `round` helper as the previous slide.
+- The surrounding app renders the map with `id="map"` and owns `selectedGraphic`; imports, selection, clearing, and lifecycle setup remain in the full demo.
+- Compare the same path on both slides: component progress event → analysis-view statistics → distance and elevation.
+- Vanilla updates existing DOM nodes; React updates state and renders the chips conditionally.
 -->
 
 ---
@@ -815,13 +820,16 @@ pnpm run dev
 
 <!--
 - If editor diagnostics are unavailable, run `pnpm run typecheck`.
-1. Open `demo/3-typescript`: `package.json`, `tsconfig.json`, and `src/vite-env.d.ts`.
-2. In `src/App.tsx`, hover `popupDockOptions: DockOptions`.
-3. Add an unknown property; show the diagnostic; undo the edit.
-4. Show `round(value?: number)` and the typed map event.
-5. Demonstrate `event.target` completion and the unavailable-map guard.
-6. Restore the code; run `pnpm run typecheck`.
-7. Explain that type checking is separate from the Vite build.
+1. Open `demo/3-typescript`: `package.json`, `tsconfig.json`, and `src/vite-env.d.ts`; show the React and SDK/Calcite type packages and references.
+2. In `src/main.tsx`, show `getElementById("root")!`; temporarily remove `!` to demonstrate the nullable element diagnostic, then undo. The assertion adds no runtime check.
+3. In `src/App.tsx`, show `import type`; these imports are erased from the runtime bundle.
+4. Hover `popupDockOptions: DockOptions`. Add an unknown property; show the diagnostic; undo the edit.
+5. Show `round(value?: number)`: temporarily add `round("wrong")` to demonstrate an invalid argument, then remove it. Explain the optional argument and fallback.
+6. Show `useState<boolean>(false)` for `mapLoaded`; temporarily replace `false` with `123`, inspect the diagnostic, then undo.
+7. Show `HTMLArcgisMapElement["arcgisViewReadyChange"]`: emitting element plus event name identifies the event type. Demonstrate `event.target` completion, inline documentation, and the unavailable-map guard.
+8. Temporarily add `myRandomProp={true}` to `<arcgis-map>` in JSX; show the diagnostic, then undo.
+9. Restore all code; run `pnpm run typecheck`. Explain that type checking is separate from the Vite build.
+- Steps 2, 3, 5, 6, and 8 restore the original walkthrough examples and can be shortened or skipped to retain the rehearsal timing.
 -->
 
 ---
@@ -859,7 +867,7 @@ pnpm run dev
 
 <!--
 1. Compare `src/App.tsx` in `demo/3-typescript` and `demo/4-typescript-react-encapsulation`.
-2. Locate `ElevationProfilePanel`: a separate component in the same file.
+2. Open `src/ElevationProfilePanel.tsx`: the extracted component in its own file.
 3. Show its `selectedGraphic` prop, local state, handler, and markup.
 4. Show the parent’s conditional render.
 5. Select a trail to reveal the panel; clear selection to remove it.

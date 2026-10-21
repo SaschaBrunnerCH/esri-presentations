@@ -4,7 +4,11 @@
 
 ## Key changes from [3-typescript](../3-typescript/)
 
-- Refactored the elevation profile panel into a separate component
+- Moved the elevation profile's state, event handler, markup, and rounding helper into [ElevationProfilePanel.tsx](src/ElevationProfilePanel.tsx).
+- `App.tsx` owns the selected trail and conditionally renders the panel, passing `selectedGraphic` as its input.
+
+Compare `3-typescript/src/App.tsx` with this demo's `src/App.tsx`, then open
+`src/ElevationProfilePanel.tsx` to see where the removed code now lives.
 
 ## Technologies used:
 
