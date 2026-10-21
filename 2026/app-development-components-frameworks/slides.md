@@ -429,8 +429,8 @@ As of 5.0.0, `@arcgis/*` packages follow semantic versioning.
 
 | Range     | Allows                                      |
 | --------- | ------------------------------------------- |
-| `~5.1.25` | Patches: `>=5.1.25 <5.2.0`                  |
-| `^5.1.25` | Minor and patch releases: `>=5.1.25 <6.0.0` |
+| `~5.1.25` <small class="opacity-60">(tilde)</small> | Patches: `>=5.1.25 <5.2.0`                  |
+| `^5.1.25` <small class="opacity-60">(caret)</small> | Minor and patch releases: `>=5.1.25 <6.0.0` |
 
 Commit `pnpm-lock.yaml` to record the resolved dependency versions.
 

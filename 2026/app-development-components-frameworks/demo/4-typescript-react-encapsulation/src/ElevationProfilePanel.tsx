@@ -64,8 +64,8 @@ const ElevationProfilePanel = ({
       <arcgis-elevation-profile
         referenceElement="map"
         feature={selectedGraphic}
-        elevationUnit="imperial"
-        distanceUnit="imperial"
+        elevationUnit="meters"
+        distanceUnit="meters"
         hideClearButton
         hideLegend
         hideSettingsButton
