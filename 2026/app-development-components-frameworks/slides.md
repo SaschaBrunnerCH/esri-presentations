@@ -915,12 +915,84 @@ pnpm run dev
 </div>
 
 <!--
-- Closing order: 40 → 42 → 43 → 44 → 41.
+- Closing order: 40 → 41 → 42 → 45 → 46 → 47 → 43 → 44.
 - Vite: development and build tooling.
 - React: UI updates driven by state.
 - TypeScript: editor feedback.
 - Components: related behavior grouped together.
 - Point to the two follow-on sessions this afternoon.
+-->
+
+---
+
+# AI-assisted development
+
+Start from a current **`@arcgis/create` template**, which provides supported files and patterns.
+
+**You need:**
+
+- Node.js LTS and Git
+- ArcGIS licensing through Online, Enterprise, or Location Platform
+- An AI coding assistant that can edit files and run project commands
+
+**Continue with the guides:**
+
+- [AI-assisted development](https://developers.arcgis.com/javascript/latest/ai-assisted-development/)
+- [Create a new app with AI](https://developers.arcgis.com/javascript/latest/ai-assisted-development/create-a-new-app/)
+
+<!--
+- Return to the starting point from the scaffold demo: use a current @arcgis/create template for the selected framework and build tool.
+- The template supplies supported project files and integration patterns for the assistant to work with.
+- Briefly name the prerequisites: Node.js LTS, Git, ArcGIS licensing, and an assistant that can edit project files and run commands.
+- Open the overview guide for other workflows, or Create a new app with AI for the template-based starting path.
+- Review the generated app, check the installed SDK version, and verify the result in the browser, as demonstrated throughout this session.
+-->
+
+---
+
+# AI-assisted development in practice
+
+<div class="ai-blog-grid">
+  <a class="ai-blog-card" href="https://www.esri.com/arcgis-blog/products/js-api-arcgis/geoai/building-my-first-js-web-app-with-ai" target="_blank" rel="noopener noreferrer">
+    <img src="./assets/ai-assisted-development/building-my-first-js-web-app-with-ai.png" alt="Malbork Castle app title image" />
+    <div class="ai-blog-caption">
+      <h3>Building my first JS web app with AI</h3>
+      <p>Agnieszka Rozniak</p>
+    </div>
+  </a>
+  <a class="ai-blog-card" href="https://www.esri.com/arcgis-blog/products/js-api-arcgis/geoai/rethinking-application-migrations" target="_blank" rel="noopener noreferrer">
+    <img src="./assets/ai-assisted-development/rethinking-application-migrations.png" alt="Application migration title image" />
+    <div class="ai-blog-caption">
+      <h3>Rethinking Application Migrations</h3>
+      <p>Dagmara Pasiak and Sascha Brunner</p>
+    </div>
+  </a>
+</div>
+
+<!--
+- Two ArcGIS Blog articles to continue after the session: creating an app with AI and modernizing an existing application.
+- Open either article by clicking its image or title.
+- The original title images are stored locally; assets/ai-assisted-development/source.json records the article and image URLs.
+-->
+
+---
+layout: full
+title: Tonight's Dev & Tech Summit Party
+---
+
+<img
+  class="absolute inset-0 h-full w-full object-contain"
+  src="./assets/eudts-2026/party-original.png"
+  alt="Join us for tonight’s Dev & Tech Summit Party! Collect your ticket with boat assignment from the Registration Desk, 10:00–16:30. Shuttles begin loading after sessions conclude at 17:00. Boats depart promptly at 18:15; arrive early. Mainkai 36, 60311 Frankfurt am Main."
+/>
+
+<!--
+- Original slide 1 from Euro Dev and Tech Summit 2026 Party.pptx, exported unchanged through Microsoft PowerPoint.
+- Collect your ticket with boat assignment from the Registration Desk, 10:00–16:30.
+- Shuttles begin loading after sessions conclude at 17:00.
+- Boats depart promptly at 18:15; arrive early.
+- Mainkai 36, 60311 Frankfurt am Main.
+- Continue directly to Questions.
 -->
 
 ---

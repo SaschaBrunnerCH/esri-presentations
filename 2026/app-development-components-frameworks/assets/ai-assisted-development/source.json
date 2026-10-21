@@ -1,0 +1,17 @@
+{
+  "notes": "Original title images copied unchanged from each article\u2019s og:image metadata. Copyright Esri.",
+  "images": [
+    {
+      "file": "building-my-first-js-web-app-with-ai.png",
+      "title": "Building my first JS web app with AI",
+      "article": "https://www.esri.com/arcgis-blog/products/js-api-arcgis/geoai/building-my-first-js-web-app-with-ai",
+      "image": "https://www.esri.com/arcgis-blog/app/uploads/2026/10/start_image_2_correct_size.png"
+    },
+    {
+      "file": "rethinking-application-migrations.png",
+      "title": "Rethinking Application Migrations",
+      "article": "https://www.esri.com/arcgis-blog/products/js-api-arcgis/geoai/rethinking-application-migrations",
+      "image": "https://www.esri.com/arcgis-blog/app/uploads/2026/09/Image-preview-1.png"
+    }
+  ]
+}
