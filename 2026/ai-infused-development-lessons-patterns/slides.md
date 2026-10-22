@@ -512,45 +512,6 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
 
 ---
 
-<div class="native-kicker">MAINTAIN / REUSABLE CHECKS</div>
-
-# Reusable tools and skills
-
-<div class="native-subtitle">Esri teams use skills for code discovery and checks.</div>
-<div class="native-grid reusable-grid">
-  <ul class="native-lines">
-    <li v-click="1"><strong>Skill: instructions</strong></li>
-    <li v-click="2"><strong>Tool: runs a task</strong></li>
-    <li v-click="3"><strong>Gate: required checks</strong><small>Same command locally + CI</small></li>
-  </ul>
-  <div v-click="4" class="guardrail-example">
-    <div class="native-code-label">MY STARTER / ONE CHECK COMMAND</div>
-    <code>pnpm check:push</code>
-    <table aria-label="Examples of rules and their enforcement">
-      <thead><tr><th>Rule</th><th>Mechanism</th></tr></thead>
-      <tbody>
-        <tr><td>Format + build</td><td>Automated gate</td></tr>
-        <tr><td>Allow a merge</td><td>Checks + owner's yes</td></tr>
-        <tr><td>Judge the result</td><td>Human review</td></tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div v-click="4" class="native-close">A rule needs a mechanism.</div>
-<div class="cycle-step stage-maintain" aria-label="Current development stage: 07 MAINTAIN">07 MAINTAIN</div>
-
-<!--
-- Timing: 0:50.
-- A skill gives instructions; a tool runs a task.
-- Teams use skills for code and checks; saving time and tokens is a recommendation.
-- Call the check tool, report results and stop on failure; tools and CI enforce required checks.
-- My starter runs pnpm check:push before pushing and in PR CI from one shared list. It includes formatting, types, tests and the build; browser acceptance is separate evidence.
-- The table is a simplified presenter example from my starter, not a claim about Esri teams' enforcement.
-- Source cue: ESRI FEEDBACK — Web GIS SDK / ArcGIS Pro: reusable skills and tools; general engineering feedback recommends them for speed, token savings and reproducibility.
--->
-
----
-
 <div class="native-kicker">MAINTAIN / DOCUMENTATION</div>
 
 # Documentation: write and validate

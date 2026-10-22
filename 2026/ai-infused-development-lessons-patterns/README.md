@@ -1,6 +1,6 @@
 # AI Across the Development Cycle
 
-21 slides on AI-assisted development lessons and patterns from Esri engineers.
+20 slides on AI-assisted development lessons and patterns from Esri engineers.
 
 [Slide source](./slides.md) · [Published presentation](https://saschabrunnerch.github.io/esri-presentations/2026/ai-infused-development-lessons-patterns/)
 
