@@ -1,6 +1,6 @@
 # AI Across the Development Cycle
 
-22 slides on AI-assisted development lessons and patterns from Esri engineers.
+21 slides on AI-assisted development lessons and patterns from Esri engineers.
 
 [Slide source](./slides.md) · [Published presentation](https://saschabrunnerch.github.io/esri-presentations/2026/ai-infused-development-lessons-patterns/)
 
@@ -34,8 +34,6 @@ seventh and final click.
 
 Presenter notes distinguish reported practices, presenter examples and illustrations.
 Practical resource: [agentic-starter-ts](https://github.com/SaschaBrunnerCH/agentic-starter-ts).
-
-The final feedback slide uses the [shared original artwork](../.meta/assets/README.md).
 
 The Esri event artwork follows the [Using Frameworks presentation](../app-development-components-frameworks/).
 The Slidev logo comes from `@slidev/client`; the
