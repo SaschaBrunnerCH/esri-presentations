@@ -125,10 +125,11 @@ preloadImages: false
     <div class="prd-stage"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 12c11-4 20-2 24 2 4-4 13-6 24-2v39c-11-4-20-2-24 2-4-4-13-6-24-2zM32 14v39M15 23h10M39 23h10M15 32h10M39 32h10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Project rules</strong></div>
   </div>
   <div v-click="3" class="native-document codebase-overview">
-    <div class="native-document-header">WHAT AI SHOULD RETURN</div>
-    <div><span>What the app does</span><strong>User tasks and behavior</strong></div>
-    <div><span>Where to find it</span><strong>Code, tests and documentation</strong></div>
-    <div><span>Still unclear</span><strong>Questions to investigate</strong></div>
+    <div class="native-document-header">SHARED REPOSITORY / EXAMPLE</div>
+    <div><span>AGENTS.md</span><strong>Project instructions</strong></div>
+    <div><span>docs/decisions/</span><strong>Why we chose this approach</strong></div>
+    <div><span>examples/</span><strong>Working reference patterns</strong></div>
+    <div><span>skills/</span><strong>Task-specific guidance</strong></div>
   </div>
 </div>
 <div class="code-inspector-strip" role="img" aria-label="Robot, magnifying glass and code results revealed in three steps">
@@ -143,10 +144,11 @@ preloadImages: false
 - Timing: 1:05.
 - Ask about user tasks, code and project rules.
 - Brief the agent with SDK and platform versions, layer schema, deployment constraints and a reference example. Ask it to identify missing context.
+- Save team knowledge in shared instructions, decisions, examples and skills.
+- Keep core guidance short. Search docs for details and share verified lessons.
 - Ask for an explanation, code links and open questions.
 - Check it in the running app and against current SDK guidance.
-- Know what to keep and where to work.
-- Source cue: SYNTHESIS — ArcGIS Pro / Web GIS SDK: code discovery and project guidance; Native SDK deck: concrete technical context.
+- Source cue: SYNTHESIS — ArcGIS Pro / Web GIS SDK: code discovery and project guidance; Hudson Miears and Paul Sturm / Runtime feedback: persistent shared context; Native SDK deck: concrete technical context. Repository layout is illustrative.
 -->
 
 ---
@@ -217,10 +219,10 @@ preloadImages: false
 
 # Migration: update or rebuild?
 
-<div class="native-subtitle">Outdated technology. Migration is needed.</div>
+<div class="native-subtitle">Web GIS SDK engineers reported an AI-assisted Vitest migration.</div>
 <div class="modernization-choice">
   <div v-click="1" class="modernization-start">
-    <span>START</span><strong>App on outdated technology</strong><small>Needs migration.</small>
+    <span>ILLUSTRATIVE DECISION</span><strong>App on outdated technology</strong><small>Revisit deferred migration work.</small>
   </div>
   <div class="modernization-fork" aria-hidden="true"><span v-click="2">↗</span><span v-click="3">↘</span></div>
   <div class="modernization-options">
@@ -234,11 +236,13 @@ preloadImages: false
 
 <!--
 - Timing: 1:05.
+- Web GIS SDK: AI helped make the Vitest migration feasible.
+- Revisit deferred modernization; the diagram shows my separate app migration example.
 - Update the old code step by step, or build a new app.
 - Use the old code to find unusual cases, errors and access rules.
 - Decide what to keep, fix or improve.
 - Write down the agreed behavior and test the new app against it.
-- Source cue: MY EXAMPLE — App migration/rebuild; Web GIS SDK feedback separately reports an AI-assisted Vitest migration.
+- Source cue: ESRI FEEDBACK — Hugo Campos / Web GIS SDK: AI-assisted Vitest migration. MY EXAMPLE — Separate app migration/rebuild decision; no Vitest implementation or measured outcome is shown.
 -->
 
 ---
@@ -487,7 +491,7 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
     </div>
     <div v-click="4" class="repeatability-step">
       <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="27" cy="27" r="17"/><path d="m40 40 16 16M19 26h16m-16 7h10"/></svg>
-      <div><span>04 / ACCEPTANCE</span><strong>Review the evidence</strong><small>Check results before accepting</small></div>
+      <div><span>04 / REVIEW</span><strong>AI review → fix → human review</strong><small>Scenarios + project rules + full diff</small></div>
     </div>
   </div>
   <div v-click="5" class="repeatability-deploy"><span>DEPLOY</span><div><strong>AI advice cannot replace release gates.</strong><small>Reviewed scripts · required checks · approval rules</small></div></div>
@@ -500,8 +504,10 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
 - AI results can vary; make the work around AI repeatable.
 - Use clear requirements, stable inputs, scripts, behavior checks and evidence review.
 - An access-rule reminder helps; a regression test checks whether the rules still hold.
+- After checks, ask AI to review the complete change against the agreed scenarios, project instructions and documentation. Resolve valid findings before human review of behavior and design.
+- Separate correctness and maintainability passes can organize the review. Repeated AI approval is not proof of correctness; humans still judge the result.
 - Enforce release gates; AI advice cannot replace them. Check the deployed app as its users.
-- Source cue: SYNTHESIS — ArcGIS GeoBIM checks and general engineering guidance on reproducibility; deployment gates are our recommendation.
+- Source cue: SYNTHESIS — ArcGIS GeoBIM checks and general engineering guidance on reproducibility; Paul Sturm: AI review before human review; Max Patiiuk / Web GIS SDK: review grounded in project guidance. Review sequence and deployment gates are recommendations.
 -->
 
 ---
