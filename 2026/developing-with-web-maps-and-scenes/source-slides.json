@@ -1,0 +1,778 @@
+[
+  {
+    "number": 1,
+    "text": "ESRI EUROPEAN DEVELOPER & TECHNOLOGY SUMMIT 2026\nCopyright © 2026 Esri. All rights reserved.\nArcGIS Online: Developing with Web Maps and Web Scenes\nKristian Kaesinger, Esri UKSascha Brunner, Esri",
+    "links": []
+  },
+  {
+    "number": 2,
+    "text": "Please share your feedback in the app\nSelect “My Event” in the event app main menu\nSelect “My Surveys”\nSelect the desired survey\nComplete the survey",
+    "links": []
+  },
+  {
+    "number": 3,
+    "text": "Outline\nCore concepts\nMap authoring and consumption\nBuilding interactive apps from Web Maps and Web Scenes\nAuthorization and permissions\nClosing remarks and Q&A",
+    "links": []
+  },
+  {
+    "number": 4,
+    "text": "Core Concepts",
+    "links": []
+  },
+  {
+    "number": 5,
+    "text": "What is a WebScene/WebMap",
+    "links": []
+  },
+  {
+    "number": 6,
+    "text": "What is a WebScene/WebMap\n{\n    \"operationalLayers\": [ ... ],\n    \"baseMap\": {\n        \"baseMapLayers\": [ ... ],\n        \"id\": \"basemap\",\n        \"title\": \"Topographic\",\n        \"elevationLayers\": [...]\n    },\n    \"ground\": {\n        \"layers\": [...]\n    },\n    \"heightModelInfo\": ...,\n    \"version\": \"1.10\",\n    \"authoringApp\": \"WebSceneViewer\",\n    \"authoringAppVersion\": \"6.1.0.0\",\n    \"presentation\": ...,\n    \"initialState\": {\n        \"environment\": ...,\n        \"viewpoint\": ...\n    },\n    \"spatialReference\": ...,\n    \"viewingMode\": \"global\"\n}\njson",
+    "links": []
+  },
+  {
+    "number": 7,
+    "text": "What is a WebScene/WebMap\n{\n    \"operationalLayers\": [ ... ],\n    \"baseMap\": {\n        \"baseMapLayers\": [ ... ],\n        \"id\": \"basemap\",\n        \"title\": \"Topographic\",\n        \"elevationLayers\": [...]\n    },\n    \"ground\": {\n        \"layers\": [...]\n    },\n    \"heightModelInfo\": ...,\n    \"version\": \"1.10\",\n    \"authoringApp\": \"WebSceneViewer\",\n    \"authoringAppVersion\": \"6.1.0.0\",\n    \"presentation\": ...,\n    \"initialState\": {\n        \"environment\": ...,\n        \"viewpoint\": ...\n    },\n    \"spatialReference\": ...,\n    \"viewingMode\": \"global\"\n}\njson\nhttps://arcg.is/1XTv0S2",
+    "links": [
+      {
+        "url": "https://arcg.is/1XTv0S2",
+        "bounds": {
+          "x": 2.881356627296588,
+          "y": 90.98350831146107,
+          "width": 19.524458661417324,
+          "height": 4.936628754738991
+        }
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "text": "Web Map vs. Web Scene",
+    "links": []
+  },
+  {
+    "number": 9,
+    "text": "Web Map vs. Web Scene\nWeb Map\nWeb Scene\n2D\n3D",
+    "links": []
+  },
+  {
+    "number": 10,
+    "text": "Web Map vs. Web Scene\nMap\nWeb Map\nWeb Scene\n2D\n3D",
+    "links": []
+  },
+  {
+    "number": 11,
+    "text": "Bigger picture\nWeb Apps in ArcGIS",
+    "links": []
+  },
+  {
+    "number": 12,
+    "text": "Bigger picture\nArcGIS Platform Services\nFeature service\nScene service\nContent and Data services\n…\nSpatial analysis\nRaster analysis\nAnalysis services\n…\nContent management\nCore services\n…\nWeb Apps in ArcGIS",
+    "links": []
+  },
+  {
+    "number": 13,
+    "text": "Bigger picture\nArcGIS Platform Services\nFeature service\nScene service\nContent and Data services\n…\nSpatial analysis\nRaster analysis\nAnalysis services\n…\nContent management\nCore services\n…\nRest API\nWeb Apps in ArcGIS",
+    "links": []
+  },
+  {
+    "number": 14,
+    "text": "Bigger picture\nArcGIS Platform Services\nFeature service\nScene service\nContent and Data services\n…\nSpatial analysis\nRaster analysis\nAnalysis services\n…\nContent management\nCore services\n…\nRest API\nArcGIS Pro\nArcGIS Runtime\n…\nWeb Apps in ArcGIS",
+    "links": []
+  },
+  {
+    "number": 15,
+    "text": "Bigger picture\nArcGIS Platform Services\nFeature service\nScene service\nContent and Data services\n…\nSpatial analysis\nRaster analysis\nAnalysis services\n…\nContent management\nCore services\n…\nRest API\nMaps SDK\nWeb Apps\nArcGIS Pro\nArcGIS Runtime\n…\nWeb Apps in ArcGIS",
+    "links": []
+  },
+  {
+    "number": 16,
+    "text": "Bigger picture\nArcGIS Platform Services\nRest API\nMaps SDK\nWeb Apps\nArcGIS Pro\nArcGIS Runtime\n…\nWeb Apps in ArcGIS\nFeatureLayer\nBasemap\nSceneLayer",
+    "links": []
+  },
+  {
+    "number": 17,
+    "text": "Bigger picture\nArcGIS Platform Services\nRest API\nWeb Apps in ArcGIS\nFeatureLayer\nBasemap\nSceneLayer\nApplication",
+    "links": []
+  },
+  {
+    "number": 18,
+    "text": "Bigger picture\nWeb Apps in ArcGIS\nFeatureLayer\nBasemap\nSceneLayer\nApplication",
+    "links": []
+  },
+  {
+    "number": 19,
+    "text": "Bigger picture\nWeb Apps in ArcGIS\nFeatureLayer\nBasemap\nSceneLayer\nApplication\nApplication\nApplication",
+    "links": []
+  },
+  {
+    "number": 20,
+    "text": "Purpose of Web Maps and Web Scenes\nFeatureLayer\nBasemap\nSceneLayer\nApplication\nApplication\nApplication",
+    "links": []
+  },
+  {
+    "number": 21,
+    "text": "Purpose of Web Maps and Web Scenes\nFeatureLayer\nBasemap\nSceneLayer\nApplication\nApplication\nApplication\nBundles service references",
+    "links": []
+  },
+  {
+    "number": 22,
+    "text": "Purpose of Web Maps and Web Scenes\nFeatureLayer\nBasemap\nSceneLayer\nApplication\nBundles service references\nEnables cross-product exchange\nApplication\nApplication",
+    "links": []
+  },
+  {
+    "number": 23,
+    "text": "Purpose of Web Maps and Web Scenes\nFeatureLayer\nBasemap\nSceneLayer\nApplication\nApplication\nBundles service references\nEnables cross-product exchange\nConfigures:\nVisibilities\nApplication",
+    "links": []
+  },
+  {
+    "number": 24,
+    "text": "Purpose of Web Maps and Web Scenes\nFeatureLayer\nBasemap\nSceneLayer\nApplication\nApplication\nBundles service references\nEnables cross-product exchange\nConfigures:\nVisibilities\nRendering & symbolization overrides\nApplication",
+    "links": []
+  },
+  {
+    "number": 25,
+    "text": "Purpose of Web Maps and Web Scenes\nFeatureLayer\nBasemap\nSceneLayer\nApplication\nApplication\nBundles service references\nEnables cross-product exchange\nConfigures:\nVisibilities\nRendering & symbolization overrides\nSpatial filters\nApplication",
+    "links": []
+  },
+  {
+    "number": 26,
+    "text": "Purpose of Web Maps and Web Scenes\nFeatureLayer\nBasemap\nSceneLayer\nApplication\nApplication\nBundles service references\nEnables cross-product exchange\nConfigures:\nVisibilities\nRendering & symbolization overrides\nSpatial filters\nViewpoint\nApplication",
+    "links": []
+  },
+  {
+    "number": 27,
+    "text": "Purpose of Web Maps and Web Scenes\nFeatureLayer\nBasemap\nSceneLayer\nApplication\nApplication\nBundles service references\nEnables cross-product exchange\nConfigures:\nVisibilities\nRendering & symbolization overrides\nSpatial filters\nViewpoint\nEnvironment\nApplication",
+    "links": []
+  },
+  {
+    "number": 28,
+    "text": "Purpose of Web Maps and Web Scenes\nFeatureLayer\nBasemap\nSceneLayer\nApplication\nApplication\nBundles service references\nEnables cross-product exchange\nConfigures:\nVisibilities\nRendering & symbolization overrides\nSpatial filters\nViewpoint\nEnvironment\nAnalyses\nApplication",
+    "links": []
+  },
+  {
+    "number": 29,
+    "text": "Purpose of Web Maps and Web Scenes\nFeatureLayer\nBasemap\nSceneLayer\nApplication\nApplication\nBundles service references\nEnables cross-product exchange\nConfigures:\nVisibilities\nRendering & symbolization overrides\nSpatial filters\nViewpoint\nEnvironment\nAnalyses\nPresentation slides\nApplication",
+    "links": []
+  },
+  {
+    "number": 30,
+    "text": "Purpose of Web Maps and Web Scenes\nFeatureLayer\nBasemap\nSceneLayer\nApplication\nApplication\nBundles service references\nEnables cross-product exchange\nConfigures:\nVisibilities\nRendering & symbolization overrides\nSpatial filters\nViewpoint\nEnvironment\nAnalyses\nPresentation slides\nNative format for MapViewer and SceneViewer\nApplication\njson",
+    "links": []
+  },
+  {
+    "number": 31,
+    "text": "Application\nFeatureLayer\nBasemap\nSceneLayer\nApplication\nFacilitates decoupling of cartography and app development\nPurpose of Web Maps and Web Scenes\njson\nApplication\nCartography\nApplication",
+    "links": []
+  },
+  {
+    "number": 32,
+    "text": "Purpose of Web Maps and Web Scenes",
+    "links": []
+  },
+  {
+    "number": 33,
+    "text": "Outline\nCore concepts\nMap authoring and consumption",
+    "links": []
+  },
+  {
+    "number": 34,
+    "text": "Map authoring and consumption",
+    "links": []
+  },
+  {
+    "number": 35,
+    "text": "Authoring via ArcGIS Online",
+    "links": []
+  },
+  {
+    "number": 36,
+    "text": "Authoring via ArcGIS Pro",
+    "links": []
+  },
+  {
+    "number": 37,
+    "text": "Authoring via ArcGIS Pro",
+    "links": []
+  },
+  {
+    "number": 38,
+    "text": "Authoring via ArcGIS Pro",
+    "links": []
+  },
+  {
+    "number": 39,
+    "text": "Authoring via ArcGIS Pro",
+    "links": []
+  },
+  {
+    "number": 40,
+    "text": "Authoring via ArcGIS Pro",
+    "links": []
+  },
+  {
+    "number": 41,
+    "text": "Authoring via ArcGIS Maps SDK for JavaScript",
+    "links": []
+  },
+  {
+    "number": 42,
+    "text": "Authoring via ArcGIS Maps SDK for JavaScript\nawait map.updateFrom(view);\n \nconst portalUrl = \"https://zurich.maps.arcgis.com/\";\nconst item = await map.saveAs({\n  portal: {\n      url: portalUrl\n    },\n    title: \"forest area with trees\"\n  },\n  {\n    folder: \"87bb8b00a05e46ab8bad08fec83c241e\"\n  });\n \nconst link = document.getElementById(\"open-webscene-link\");\nlink.href=`${portalUrl}/home/webscene/viewer.html?webscene=${item.id}`;\nconst alert = document.getElementById(\"webscene-saved-alert\");\nalert.open = true;",
+    "links": []
+  },
+  {
+    "number": 43,
+    "text": "Authoring via ArcGIS Maps SDK for JavaScript\nawait map.updateFrom(view);\n \nconst portalUrl = \"https://zurich.maps.arcgis.com/\";\nconst item = await map.saveAs({\n  portal: {\n      url: portalUrl\n    },\n    title: \"forest area with trees\"\n  },\n  {\n    folder: \"87bb8b00a05e46ab8bad08fec83c241e\"\n  });\n \nconst link = document.getElementById(\"open-webscene-link\");\nlink.href=`${portalUrl}/home/webscene/viewer.html?webscene=${item.id}`;\nconst alert = document.getElementById(\"webscene-saved-alert\");\nalert.open = true;",
+    "links": []
+  },
+  {
+    "number": 44,
+    "text": "Consumption of Web Maps and Scenes",
+    "links": []
+  },
+  {
+    "number": 45,
+    "text": "Consumption – ArcGIS Pro",
+    "links": []
+  },
+  {
+    "number": 46,
+    "text": "Consumption – ArcGIS Pro",
+    "links": []
+  },
+  {
+    "number": 47,
+    "text": "Consumption – ArcGIS Online",
+    "links": []
+  },
+  {
+    "number": 48,
+    "text": "Consumption – ArcGIS Online\nExperience Builder\nInstant Apps\ncustom code\nno code\nconfiguration\nlow-code\nflexibility\nsimplicity\nArcGIS Maps SDK for Javascript\nMap / Scene Viewer",
+    "links": []
+  },
+  {
+    "number": 49,
+    "text": "Consumption – ArcGIS Online\nExperience Builder\nInstant Apps\ncustom code\nno code\nconfiguration\nlow-code\nflexibility\nsimplicity\nArcGIS Maps SDK for Javascript\nMap / Scene Viewer",
+    "links": []
+  },
+  {
+    "number": 50,
+    "text": "Consumption – ArcGIS Online\nExperience Builder\nInstant Apps\ncustom code\nno code\nconfiguration\nlow-code\nflexibility\nsimplicity\nArcGIS Maps SDK for Javascript\nMap / Scene Viewer",
+    "links": []
+  },
+  {
+    "number": 51,
+    "text": "Consumption – ArcGIS Online\nExperience Builder\nInstant Apps\ncustom code\nno code\nconfiguration\nlow-code\nflexibility\nsimplicity\nArcGIS Maps SDK for Javascript\nMap / Scene Viewer",
+    "links": []
+  },
+  {
+    "number": 52,
+    "text": "Consumption – ArcGIS Online\nExperience Builder",
+    "links": [],
+    "video": {
+      "bounds": {
+        "x": 28.225410104986878,
+        "y": 25.961811023622047,
+        "width": 64.86737204724409,
+        "height": 64.8673665791776
+      }
+    }
+  },
+  {
+    "number": 53,
+    "text": "Consumption – ArcGIS Online\nArcGIS Maps SDK for Javascript\nExperience Builder\nInstant Apps\ncustom code\nno code\nconfiguration\nlow-code\nflexibility\nsimplicity\nMap / Scene Viewer",
+    "links": []
+  },
+  {
+    "number": 54,
+    "text": "Consumption – ArcGIS Online – Maps SDK for JavaScript",
+    "links": []
+  },
+  {
+    "number": 55,
+    "text": "Maps SDK for JavaScript\nhtml",
+    "links": []
+  },
+  {
+    "number": 56,
+    "text": "Outline\nCore concepts\nMap authoring and consumption\nBuilding interactive apps from Web Maps and Web Scenes",
+    "links": []
+  },
+  {
+    "number": 57,
+    "text": "Building interactive apps from Web Maps and Web Scenes",
+    "links": []
+  },
+  {
+    "number": 58,
+    "text": "Popups",
+    "links": []
+  },
+  {
+    "number": 59,
+    "text": "Popups",
+    "links": []
+  },
+  {
+    "number": 60,
+    "text": "Popups",
+    "links": []
+  },
+  {
+    "number": 61,
+    "text": "Popups\nview.openPopup({\n  features: [...]\n});",
+    "links": []
+  },
+  {
+    "number": 62,
+    "text": "Arcade – Expression language for WebGIS",
+    "links": []
+  },
+  {
+    "number": 63,
+    "text": "Arcade – Expression language for WebGIS\nFeatureLayer\n(Data)\nWeb Maps and\n Scenes",
+    "links": []
+  },
+  {
+    "number": 64,
+    "text": "Arcade – Expression language for WebGIS\nFeatureLayer\n(Data)\nArcade\nWeb Maps and\n Scenes",
+    "links": []
+  },
+  {
+    "number": 65,
+    "text": "Arcade – Expression language for WebGIS\nFeatureLayer\n(Data)\nArcade\nSymbolization\n(Visualization)\nPop-ups\nLabels",
+    "links": []
+  },
+  {
+    "number": 66,
+    "text": "Arcade – Expression language for WebGIS\nFeatureLayer\n(Data)\nArcade\nSymbolization\n(Visualization)\nPop-ups\nArcade:\nPortable\nSecure\nLightweight and fast\nGeospatial built-in\nLabels",
+    "links": []
+  },
+  {
+    "number": 67,
+    "text": "Arcade – Expression language for WebGIS\nFeatureLayer\n(Data)\nArcade\nSymbolization\n(Visualization)\nPop-ups\nArcade:\nPortable\nSecure\nLightweight and fast\nGeospatial built-in\nLabels",
+    "links": []
+  },
+  {
+    "number": 68,
+    "text": "Visualisation with Arcade",
+    "links": []
+  },
+  {
+    "number": 69,
+    "text": "Arcade – Expression language for WebGIS\nFeatureLayer\n(Data)\nArcade\nLabels\nSymbolization\n(Visualisation)\nPop-ups\nArcade:\nPortable\nSecure\nLightweight and fast\nGeospatial built-in",
+    "links": []
+  },
+  {
+    "number": 70,
+    "text": "Arcade – Expression language for WebGIS",
+    "links": []
+  },
+  {
+    "number": 71,
+    "text": "Arcade – Expression language for WebGIS",
+    "links": []
+  },
+  {
+    "number": 72,
+    "text": "Arcade – Expression language for WebGIS",
+    "links": []
+  },
+  {
+    "number": 73,
+    "text": "Arcade – Expression language for WebGIS",
+    "links": []
+  },
+  {
+    "number": 74,
+    "text": "Arcade – Expression language for WebGIS\nFeatureLayer\n(Data)\nArcade\nLabels\nSymbolization\n(Visualisation)\nPop-ups\nArcade:\nPortable\nSecure\nLightweight and fast\nGeospatial built-in",
+    "links": []
+  },
+  {
+    "number": 75,
+    "text": "Labelling with Arcade",
+    "links": []
+  },
+  {
+    "number": 76,
+    "text": "Presentations\nWeb Scene only",
+    "links": []
+  },
+  {
+    "number": 77,
+    "text": "Presentations\nViewpoint\nBasemap\nLayer visibilities\nAnalyses\nElements\npopupInfo\nSlide\n…\n…\ninitialViewProperties\nPresentation\nWeb Scene only\nSlide\nSlide",
+    "links": []
+  },
+  {
+    "number": 78,
+    "text": "Presentations\nWeb Scene only",
+    "links": []
+  },
+  {
+    "number": 79,
+    "text": "Presentations\nconst viewElement = document.querySelector(\"arcgis-scene\");\nawait viewElement.viewOnReady();\n \nconst slides = viewElement.map.presentation.slides;\nconst first = slides.getItemAt(0);\nslide.applyTo(viewElement.view);\nWeb Scene only",
+    "links": []
+  },
+  {
+    "number": 80,
+    "text": "Presentations\nif( slide.elements != null && slide.elements.popupInfo != null ){\n  const featureReferences = slide.elements.popupInfo.features;\n  // get features from references using FeatureLayer.query\n  const features = getFeatures(featureReferences);\n  // open popup\n  await view.openPopup({features});\n}else{\n  // close popup\n  view.popup = null;\n}\nWeb Scene only",
+    "links": []
+  },
+  {
+    "number": 81,
+    "text": "Presentations\nhttps://link.esri.com/26eurodevtechsessions/AGO-1097-web-scene-example?qr=true\nhttps://link.esri.com/26eurodevtechsessions/AGO-1097-codepen-resources?qr=true\nWebScene\nApp",
+    "links": [
+      {
+        "url": "https://arcg.is/1y5OzL",
+        "bounds": {
+          "x": 9.711548556430445,
+          "y": 88.47337416156314,
+          "width": 32.93152066929134,
+          "height": 8.526902887139107
+        }
+      },
+      {
+        "url": "https://arcg.is/GuTu0",
+        "bounds": {
+          "x": 55.75448654855643,
+          "y": 88.75377661125692,
+          "width": 34.07110400262467,
+          "height": 8.526902887139107
+        }
+      }
+    ]
+  },
+  {
+    "number": 82,
+    "text": "Components",
+    "links": []
+  },
+  {
+    "number": 83,
+    "text": "Components\nPre-built UI elements for web apps\nEncapsulate features and logic with minimal amount of custom code\nFramework agnostic",
+    "links": []
+  },
+  {
+    "number": 84,
+    "text": "Components",
+    "links": []
+  },
+  {
+    "number": 85,
+    "text": "Components\n<arcgis-scene item-id=\"d5230fe0e3394619b6d87626f95b6eca\">\n  <arcgis-expand slot=\"top-right\">\n    <arcgis-editor />\n  </arcgis-expand>\n</arcgis-scene>",
+    "links": []
+  },
+  {
+    "number": 86,
+    "text": "Components\n<arcgis-scene item-id=\"67d5fad755d34176b0d7aa06ad0a3f6c\" popupDisabled=\"true\">\n  <arcgis-expand slot=\"top-left\">\n    <arcgis-editor />\n  </arcgis-expand>\n</arcgis-scene>",
+    "links": []
+  },
+  {
+    "number": 87,
+    "text": "Feature forms\nWeb Map only",
+    "links": []
+  },
+  {
+    "number": 88,
+    "text": "Feature forms\nWeb Map only",
+    "links": []
+  },
+  {
+    "number": 89,
+    "text": "Feature forms\nWeb Map only",
+    "links": []
+  },
+  {
+    "number": 90,
+    "text": "Feature forms\n<arcgis-map item-id=\"67d5fad755d34176b0d7aa06ad0a3f6c\">\n  <arcgis-expand slot=\"top-right\">\n    <arcgis-editor />\n  </arcgis-expand>\n</arcgis-map>\nWeb Map only",
+    "links": []
+  },
+  {
+    "number": 91,
+    "text": "Outline\nCore concepts\nMap authoring and consumption\nBuilding interactive apps from Web Maps and Web Scenes\nAuthorization and permissions",
+    "links": []
+  },
+  {
+    "number": 92,
+    "text": "Authorization andPermissions",
+    "links": []
+  },
+  {
+    "number": 93,
+    "text": "Authorization – Portal item access\nPortal\nFeatureLayer\nWeb Scene\nMaps SDK\nWeb App",
+    "links": []
+  },
+  {
+    "number": 94,
+    "text": "Authorization – Portal item access\nPortal\nFeatureLayer\nWeb Scene\nMaps SDK\nWeb App",
+    "links": []
+  },
+  {
+    "number": 95,
+    "text": "Authorization – Sharing",
+    "links": []
+  },
+  {
+    "number": 96,
+    "text": "Authorization – Sharing",
+    "links": []
+  },
+  {
+    "number": 97,
+    "text": "Authorization – Sharing\nPortal\nFeatureLayer\nWeb Scene\nMaps SDK\nWeb App",
+    "links": []
+  },
+  {
+    "number": 98,
+    "text": "Authorization – Sharing\nPortal\nFeatureLayer\nWeb Scene\nMaps SDK\nWeb App",
+    "links": []
+  },
+  {
+    "number": 99,
+    "text": "Authorization – Sharing",
+    "links": []
+  },
+  {
+    "number": 100,
+    "text": "Authorization\nPortal\nFeatureLayer\nWeb Scene\nMaps SDK\nWeb App",
+    "links": []
+  },
+  {
+    "number": 101,
+    "text": "Authorization – User",
+    "links": []
+  },
+  {
+    "number": 102,
+    "text": "Authorization – User \nUser Authentication\nBilled towards user\nPrivileges defined by\nuser\nLogin screen",
+    "links": []
+  },
+  {
+    "number": 103,
+    "text": "Authorization – App\nUser Authentication\nBilled towards user\nPrivileges defined by\nuser\nLogin screen\nApp Authentication\nBilled towards developer / organisation\nPrivileges defined by\ncredentials item\nNo login screen",
+    "links": []
+  },
+  {
+    "number": 104,
+    "text": "Authorization – Oauth",
+    "links": []
+  },
+  {
+    "number": 105,
+    "text": "Authorization – Oauth",
+    "links": []
+  },
+  {
+    "number": 106,
+    "text": "Authorization – Portal item access",
+    "links": []
+  },
+  {
+    "number": 107,
+    "text": "Authorization – Portal item access",
+    "links": []
+  },
+  {
+    "number": 108,
+    "text": "Authorization – Portal item access",
+    "links": []
+  },
+  {
+    "number": 109,
+    "text": "Authorization – Portal item access",
+    "links": []
+  },
+  {
+    "number": 110,
+    "text": "Authorization – Portal item access",
+    "links": []
+  },
+  {
+    "number": 111,
+    "text": "Authorization – Portal item access",
+    "links": []
+  },
+  {
+    "number": 112,
+    "text": "Authorization – Oauth\nPortal\nFeatureLayer\nWeb Scene\nMaps SDK\nWeb App\nOAuth",
+    "links": []
+  },
+  {
+    "number": 113,
+    "text": "Authorization – Oauth\nPortal\nFeatureLayer\nWeb Scene\nMaps SDK\nWeb App\nOAuth",
+    "links": []
+  },
+  {
+    "number": 114,
+    "text": "Authorization – Oauth\nPortal\nFeatureLayer\nWeb Scene\nMaps SDK\nWeb App\nOAuth",
+    "links": []
+  },
+  {
+    "number": 115,
+    "text": "Authorization – Oauth\nPortal\nFeatureLayer\nWeb Scene\nMaps SDK\nWeb App\nOAuth",
+    "links": []
+  },
+  {
+    "number": 116,
+    "text": "Authorization – Portal item access\nconst portalUrl = \"https://www.arcgis.com\";\nconst params = new URLSearchParams({\n  grant_type: \"client_credentials\",\n  client_id: arcgisAppId,\n  client_secret: arcgisClientSecret,\n});\nconst response = await fetch(\n  `${portalUrl}/sharing/rest/oauth2/token`,\n  {\n    method: \"POST\",\n    headers: {\n      \"Content-Type\": \"application/x-www-form-urlencoded\"\n    },\n    body: params.toString(),\n  }\n);\nif (!response.ok) {\n  const text = await response.text();\n  throw new Error(\"Token request failed: \" + text);\n}\n \nconst responseJSON = await response.json();",
+    "links": []
+  },
+  {
+    "number": 117,
+    "text": "Authorization – Portal item access\nIdentityManager.registerToken({\n  server: `${portalUrl}/sharing/rest`,\n  token: responseJSON.access_token,\n  expires: responseJSON.expires_in\n});",
+    "links": []
+  },
+  {
+    "number": 118,
+    "text": "Authorization – Oauth\nPortal\nFeatureLayer\nWeb Scene\nMaps SDK\nWeb App\nOAuth",
+    "links": []
+  },
+  {
+    "number": 119,
+    "text": "Authorization – Oauth\nPortal\nFeatureLayer\nWeb Scene\nMaps SDK\nWeb App\nOAuth\nBackend",
+    "links": []
+  },
+  {
+    "number": 120,
+    "text": "Authorization – Portal item access",
+    "links": []
+  },
+  {
+    "number": 121,
+    "text": "Authorization – Portal item access",
+    "links": []
+  },
+  {
+    "number": 122,
+    "text": "Authorization – Portal item access",
+    "links": []
+  },
+  {
+    "number": 123,
+    "text": "Authorization – App\nUser Authentication\nBilled towards user\nPrivileges defined by\nuser\nLogin screen\nApp Authentication\nBilled towards developer\nPrivileges defined by\ncredentials item\nNo login screen",
+    "links": []
+  },
+  {
+    "number": 124,
+    "text": "Authorization – App\nUser Authentication\nBilled towards user\nPrivileges defined by\nuser\nLogin screen\nApp Authentication\nBilled towards developer\nPrivileges defined by\ncredentials item\nNo login screen",
+    "links": []
+  },
+  {
+    "number": 125,
+    "text": "Authorization\nAPI Key Authentication\nUser Authentication\nApp Authentication\nBilled towards user\nBilled towards developer\nBilled towards developer\nPrivileges defined by\nuser\nPrivileges defined by\ncredentials item\nPrivileges defined by\ncredentials item\nNo login screen\nLogin screen\nNo login screen",
+    "links": []
+  },
+  {
+    "number": 126,
+    "text": "Authorization – Oauth",
+    "links": []
+  },
+  {
+    "number": 127,
+    "text": "Outline\nCore concepts\nMap authoring and consumption\nBuilding interactive apps from Web Maps and Web Scenes\nAuthorization and permissions\nClosing remarks and Q&A",
+    "links": []
+  },
+  {
+    "number": 128,
+    "text": "Summary\nWeb Map and Web Scene\nAuthoring and consumption across ArcGIS platform\nDynamic maps via Popups, Arcade, Components and FeatureForms\nAuthorizing apps via User or App authorization",
+    "links": []
+  },
+  {
+    "number": 129,
+    "text": "References",
+    "links": []
+  },
+  {
+    "number": 130,
+    "text": "Collect your ticket with boat assignment from the Registration Desk from 10:00 – 16:30. \nShuttles will begin loading after sessions conclude at 17:00.\nBoats will depart promptly at 18:15, be sure to arrive early!\nJoin us for tonight’s Dev & Tech Summit Party!\nMainkai 36 60311 Frankfurt am Main",
+    "links": []
+  },
+  {
+    "number": 131,
+    "text": "Questions",
+    "links": []
+  },
+  {
+    "number": 132,
+    "text": "Acknowledgments\nMarkstammdatenregister, Data License Germany – Attribution – Version 2.0\nPhotos by Thomas Réaubourg on Unsplash\nSource: [add source information]",
+    "links": []
+  },
+  {
+    "number": 133,
+    "text": "Please share your feedback in the app\nSelect “My Event” in the event app main menu\nSelect “My Surveys”\nSelect the desired survey\nComplete the survey",
+    "links": []
+  },
+  {
+    "number": 134,
+    "text": "Join the conversation using #EUDevTech2026\nx.com/EsriDevs\nx.com/EsriDevEvents\nyoutube.com/@EsriDevs\nlinks.esri.com/DevVideos\ngithub.com/Esri\ngithub.com/EsriDevEvents\nlinks.esri.com/EsriDevCommunity\nConnect with us on social",
+    "links": [
+      {
+        "url": "https://x.com/EsriDevs",
+        "bounds": {
+          "y": 30.974454526548033,
+          "width": 13.541666666666666,
+          "height": 7.851852134422019,
+          "x": 12.800278663635254
+        }
+      },
+      {
+        "url": "https://x.com/esridevevents",
+        "bounds": {
+          "y": 38.82630524811921,
+          "width": 18.333333333333332,
+          "height": 8.407407689977575,
+          "x": 12.800278663635254
+        }
+      },
+      {
+        "url": "https://www.youtube.com/@EsriDevs",
+        "bounds": {
+          "y": 47.23371152524595,
+          "width": 21.171875,
+          "height": 8.407407689977575,
+          "x": 12.800278663635254
+        }
+      },
+      {
+        "url": "https://mediaspace.esri.com/category/ArcGIS+Developers/244548402?rsource=https%3A%2F%2Flinks.esri.com%2FDevVideos",
+        "bounds": {
+          "y": 55.64111780237268,
+          "width": 21.424482663472492,
+          "height": 8.407407689977575,
+          "x": 12.800278663635254
+        }
+      },
+      {
+        "url": "https://github.com/Esri",
+        "bounds": {
+          "y": 64.04852973090277,
+          "width": 13.4375,
+          "height": 8.407407689977575,
+          "x": 12.800278663635254
+        }
+      },
+      {
+        "url": "https://github.com/EsriDevEvents",
+        "bounds": {
+          "y": 72.45593600802951,
+          "width": 22.5,
+          "height": 8.407407689977575,
+          "x": 12.800278663635254
+        }
+      },
+      {
+        "url": "https://community.esri.com/t5/developers/ct-p/developers?rsource=https%3A%2F%2Flinks.esri.com%2FEsriDevCommunity",
+        "bounds": {
+          "y": 80.86334228515625,
+          "width": 27.91719118754069,
+          "height": 5.814814744172273,
+          "x": 12.800278663635254
+        }
+      }
+    ]
+  },
+  {
+    "number": 135,
+    "text": "Copyright © 2026 Esri. All rights reserved.Portions of this work may include Adobe Stock images used under license. Copyright © 2026 Adobe Inc. All rights reserved.",
+    "links": []
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "slidev build",
+    "start": "slidev --open",
+    "export": "slidev export",
+    "preview": "vite preview"
+  },
+  "packageManager": "pnpm@12.6.0"
+}

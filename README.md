@@ -6,6 +6,8 @@ Slides and demo apps for Esri developer events.
 
 ## 2026
 
+- [ArcGIS Online: Developing with Web Maps and Web Scenes](2026/developing-with-web-maps-and-scenes/README.md) · Kristian Kaesinger, Sascha Brunner
+
 - [ArcGIS Maps SDK for JavaScript: App Development with Components – Using Frameworks](2026/app-development-components-frameworks/README.md)  
   Esri European Developer & Technology Summit 2026 · Sascha Brunner
 - [AI Across the Development Cycle](2026/ai-infused-development-lessons-patterns/README.md) · Sascha Brunner

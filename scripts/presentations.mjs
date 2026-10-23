@@ -3,6 +3,11 @@ import { fileURLToPath } from 'node:url';
 export const repositoryRoot = fileURLToPath(new URL('../', import.meta.url));
 export const presentations = [
   {
+    path: '2026/developing-with-web-maps-and-scenes',
+    title: 'ArcGIS Online: Developing with Web Maps and Web Scenes',
+    videos: [{ slide: 16, clicks: 5 }],
+  },
+  {
     path: '2026/app-development-components-frameworks',
     title: 'App Development with Components',
   },
