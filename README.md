@@ -10,7 +10,7 @@ Slides and demo apps for Esri developer events.
 
 - [ArcGIS Maps SDK for JavaScript: App Development with Components – Using Frameworks](2026/app-development-components-frameworks/README.md)  
   Esri European Developer & Technology Summit 2026 · Sascha Brunner
-- [AI Across the Development Cycle](2026/ai-infused-development-lessons-patterns/README.md) · Sascha Brunner
+- [AI-Infused Development: Lessons Learned and Patterns from Esri Engineers](2026/ai-infused-development-lessons-patterns/README.md) · Raul Jimenez Ortega, Sascha Brunner
 - [3D GIS: Working with the 3D Object Layer](2026/3d-gis-3d-object-layer/README.md) · Sascha Brunner
 
 ## Quick start

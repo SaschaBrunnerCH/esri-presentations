@@ -15,7 +15,10 @@ const files = execFileSync(
 const failures = [];
 let checked = 0;
 for (const file of new Set(files)) {
-  const text = readFileSync(resolve(repositoryRoot, file), 'utf8').replace(
+  const absoluteFile = resolve(repositoryRoot, file);
+  // Unstaged deletions still appear in git ls-files. Check links from surviving files.
+  if (!existsSync(absoluteFile)) continue;
+  const text = readFileSync(absoluteFile, 'utf8').replace(
     /^(`{3,}|~{3,})[^\n]*\n[\s\S]*?^\1[^\n]*$/gm,
     '',
   );

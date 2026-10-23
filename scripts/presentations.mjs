@@ -13,10 +13,17 @@ export const presentations = [
   },
   {
     path: '2026/ai-infused-development-lessons-patterns',
-    title: 'AI across the development cycle',
+    title:
+      'AI-Infused Development: Lessons Learned and Patterns from Esri Engineers',
     videos: [
-      { slide: 9, clicks: 1 },
-      { slide: 15, clicks: 7 },
+      { slide: 8, clicks: 1 },
+      { slide: 25, clicks: 1 },
+      { slide: 31, clicks: 7 },
+    ],
+    focusStates: [
+      { slide: 48, clicks: 2, paragraph: '103:0', overlay: '91' },
+      { slide: 48, clicks: 2, paragraph: '103:2', overlay: null },
+      { slide: 48, clicks: 5, paragraph: '103:0', overlay: null },
     ],
   },
   {

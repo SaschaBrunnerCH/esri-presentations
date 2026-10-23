@@ -39,7 +39,6 @@ preloadImages: false
 - The cycle repeats as we learn from tests and feedback.
 - Lead with AI advice, or guide an agent drafting a solution.
 - Keep the key decisions with the person.
-- Source cue: SYNTHESIS — ArcGIS GeoBIM / ArcGIS Pro: agreed intent and human engineering judgment guide AI work.
 -->
 
 ---
@@ -73,7 +72,7 @@ preloadImages: false
 - Agree on the expected result, access rules and errors.
 - Use a short PRD; AI can draft it or help find gaps.
 - Product and engineering owners agree on the goal.
-- Source cue: SYNTHESIS — ArcGIS GeoBIM: agree user needs and testable requirements before building; the PRD is illustrative.
+- The PRD is illustrative.
 -->
 
 ---
@@ -108,7 +107,7 @@ preloadImages: false
 - Ask AI to propose edge cases and test data: empty selection, inaccessible layers and missing attributes. Review the proposals before using them.
 - Quick prototypes let us compare more architecture options.
 - Agreement takes time; choose the approach together and write it down.
-- Source cue: SYNTHESIS — ArcGIS GeoBIM: approved scenarios for QA and review; Native SDK deck: small phases and test design; architecture agreement is presenter experience.
+- The scenario and architecture comparison are illustrative.
 -->
 
 ---
@@ -148,7 +147,7 @@ preloadImages: false
 - Keep core guidance short. Search docs for details and share verified lessons.
 - Ask for an explanation, code links and open questions.
 - Check it in the running app and against current SDK guidance.
-- Source cue: SYNTHESIS — ArcGIS Pro / Web GIS SDK: code discovery and project guidance; Hudson Miears and Paul Sturm / Runtime feedback: persistent shared context; Native SDK deck: concrete technical context. Repository layout is illustrative.
+- The repository layout is illustrative.
 -->
 
 ---
@@ -185,7 +184,7 @@ preloadImages: false
 - Find the steps that show the problem.
 - Describe what happens and what should happen; include the environment and screenshot.
 - Define the check; an agent can draft the issue from these facts.
-- Source cue: ILLUSTRATION — ArcGIS GeoBIM practice: reproduce defects and agree expected behavior; this issue is fictional.
+- This issue is fictional.
 -->
 
 ---
@@ -206,11 +205,11 @@ preloadImages: false
 
 <!--
 - Timing: 0:55.
-- Web GIS SDK engineers report making more UI prototypes with AI.
+- Use AI to compare UI prototypes for the same user task.
 - The three flows are examples; compare the same user task.
 - Ask AI to challenge each option's assumptions. Check its critique against the user task and observed behavior.
 - Choose useful behavior and add it to the plan.
-- Source cue: SYNTHESIS — Web GIS SDK: compare quick UI prototypes; Native SDK deck: ask AI to challenge a proposal.
+- The prototype flows are illustrative.
 -->
 
 ---
@@ -236,13 +235,13 @@ preloadImages: false
 
 <!--
 - Timing: 1:05.
-- Web GIS SDK: AI helped make the Vitest migration feasible.
+- Use AI to investigate a deferred modernization task.
 - Revisit deferred modernization; the diagram shows my separate app migration example.
 - Update the old code step by step, or build a new app.
 - Use the old code to find unusual cases, errors and access rules.
 - Decide what to keep, fix or improve.
 - Write down the agreed behavior and test the new app against it.
-- Source cue: ESRI FEEDBACK — Hugo Campos / Web GIS SDK: AI-assisted Vitest migration. MY EXAMPLE — Separate app migration/rebuild decision; no Vitest implementation or measured outcome is shown.
+- The app migration example is illustrative; no measured migration outcome is shown.
 -->
 
 ---
@@ -278,7 +277,6 @@ clicks: 1
 - Recreate a Web Map in Scene Viewer with help from an agent.
 - Check layers, pop-ups, sharing and attribution before reuse.
 - Build and test the app around the scene.
-- Source cue: MY EXAMPLE — Scene Viewer: recorded browser-agent scene authoring; separate from the email.
 -->
 
 ---
@@ -302,7 +300,7 @@ clicks: 1
 - Use a Swift SDK sample to draft a similar Kotlin sample.
 - The repositories are starting points; no completed conversion is shown.
 - Check the APIs, then build, run and review the target sample.
-- Source cue: ILLUSTRATION — ArcGIS Maps SDK for Swift / Kotlin: cross-SDK sample adaptation; no completed conversion reported.
+- This is an illustration; no completed conversion is reported.
 -->
 
 ---
@@ -325,11 +323,11 @@ clicks: 1
 
 <!--
 - Timing: 0:45.
-- Business Analyst used several agents for lint and TypeScript cleanup.
+- Split lint and TypeScript cleanup into small, independently reviewable tasks.
 - The small-task workflow is a suggestion; run checks and review changes.
 - My starter uses one Git worktree per task so agents do not edit the same checkout.
 - Fewer errors do not prove correct app behavior; check that too.
-- Source cue: ESRI FEEDBACK — Business Analyst: agents addressed ESLint and TypeScript errors; the task split is illustrative.
+- The task split is illustrative.
 -->
 
 ---
@@ -357,7 +355,7 @@ clicks: 1
 - A, B and C are examples; test the chosen candidate on harder scenes.
 - Give each parallel variant its own worktree and output; compare the same inputs.
 - Compare the image, frame time and resource use.
-- Source cue: ESRI FEEDBACK — ArcGIS Maps SDK for JavaScript: agents and performance tests explored Gaussian Splats and Accessor; the comparison rows are illustrative.
+- The comparison rows are illustrative.
 -->
 
 ---
@@ -382,7 +380,6 @@ clicks: 1
 - Check three possible causes: UI, scene and data.
 - AI investigation is proposed; this CI run did not use AI.
 - Understand the alert timing before changing the reference image.
-- Source cue: MY EXAMPLE — ArcGIS Maps SDK for JavaScript sample testing: real alert difference; AI diagnosis is proposed.
 -->
 
 ---
@@ -413,10 +410,9 @@ clicks: 1
 <!--
 - Timing: 0:50.
 - Fixed waits hid code dependencies and slowed the tests down.
-- Copilot helped find those dependencies; tests changed to use view.updating.
+- Identify the dependencies, then wait for the required view state.
 - Understand why the delay exists, then wait for the required state.
 - This is separate from the alert case; no measured speedup was reported.
-- Source cue: ESRI FEEDBACK — Web GIS SDK: Copilot traced fixed-delay dependencies; tests changed to use view.updating.
 -->
 
 ---
@@ -465,7 +461,6 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
 - A phone-sized desktop viewport is emulation; it does not prove a real phone passed. Playwright WebKit is not shipping Safari.
 - Record browser, rendering OS, device and result; verify the actual renderer for graphics claims. WSL and native Windows are separate results.
 - The clip shows the setup, not a passing suite on every device. Mark untested targets as not run.
-- Source cue: MY EXAMPLE — agentic-starter-ts browser/device setup recording, 18 October 2026; the coverage diagram remains illustrative.
 -->
 
 ---
@@ -507,7 +502,6 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
 - After checks, ask AI to review the complete change against the agreed scenarios, project instructions and documentation. Resolve valid findings before human review of behavior and design.
 - Separate correctness and maintainability passes can organize the review. Repeated AI approval is not proof of correctness; humans still judge the result.
 - Enforce release gates; AI advice cannot replace them. Check the deployed app as its users.
-- Source cue: SYNTHESIS — ArcGIS GeoBIM checks and general engineering guidance on reproducibility; Paul Sturm: AI review before human review; Max Patiiuk / Web GIS SDK: review grounded in project guidance. Review sequence and deployment gates are recommendations.
 -->
 
 ---
@@ -528,7 +522,6 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
 - Review the test plan, use test data and set a time limit.
 - Follow the guide in the app; fix the guide or software when they differ.
 - Keep lasting findings and decisions in tracked documentation so the next checkout can recover the reasons without the chat.
-- Source cue: ESRI FEEDBACK — Web GIS SDK documentation search; general engineering guidance recommends writing docs with code and testing their steps.
 -->
 
 ---
@@ -566,7 +559,7 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
 - After a verified correction, update a shared project rule, example or reusable check. Future sessions can use that guidance; this does not retrain the model.
 - Verify the recorded commit, checks and approvals against live state before resuming; a handoff is not fresh evidence.
 - The access-rule example is illustrative; the record helps but gives no guarantee.
-- Source cue: SYNTHESIS — General engineering experience: resumable progress records; Native SDK deck: review, correct, save and share. The access-rule example is illustrative.
+- The access-rule example is illustrative; the record is not a guarantee.
 -->
 
 ---
@@ -597,7 +590,6 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
 - This deck was made in VS Code with an agent and Slidev.
 - I supplied the video; the agent added it and made a still frame.
 - The files stay editable; preview, improve and review the result.
-- Source cue: MY EXAMPLE — Slidev / VS Code: actual deck-authoring workflow; separate from the email.
 -->
 
 ---
@@ -623,7 +615,6 @@ const deviceVideoPoster = `${import.meta.env.BASE_URL}media/browser-device-testi
 - Give SDK and platform versions, layer schema, constraints and reference examples.
 - Run tests, check the app and review the results.
 - Save verified corrections in shared guidance, examples or checks. Share what works, then hand over to Raul on limits, risks and responsible use.
-- The linked starter is my implementation of these patterns, separate from the reported Esri team examples. Reuse the mechanisms that fit your project.
+- The linked starter implements these patterns; reuse the mechanisms that fit your project.
 - Reveal the starter link on the sixth and final click, after the five steps.
-- Source cue: SYNTHESIS — ArcGIS GeoBIM, ArcGIS Pro and Web GIS SDK: clear tasks and checked results; Native SDK deck: context briefing and shared corrections.
 -->

@@ -92,6 +92,55 @@ try {
       }, slide);
       await video.evaluate((element) => element.pause());
     }
+    for (const focus of presentation.focusStates ?? []) {
+      await page.goto(`${deck.href}#/${focus.slide}?clicks=${focus.clicks}`, {
+        waitUntil: 'load',
+      });
+      const paragraph = page.locator(
+        `#slide-content [data-slidev-no="${focus.slide}"] [data-original-paragraph="${focus.paragraph}"]`,
+      );
+      await paragraph.waitFor({ state: 'visible' });
+      const coveringOverlay = await paragraph.evaluate((element) => {
+        const overlays = [
+          ...element
+            .closest('.native-ai-slide')
+            .querySelectorAll('.ai-dim-overlay'),
+        ];
+        const previous = overlays.map((overlay) => overlay.style.pointerEvents);
+        try {
+          // Hit testing checks painter order, including SVG/HTML boundaries.
+          // Enable it temporarily on overlays that normally let clicks through.
+          overlays.forEach((overlay) => (overlay.style.pointerEvents = 'auto'));
+          const walker = document.createTreeWalker(
+            element,
+            NodeFilter.SHOW_TEXT,
+          );
+          let text;
+          while ((text = walker.nextNode()) && !text.textContent.trim()) {}
+          const range = document.createRange();
+          range.setStart(text, 0);
+          range.setEnd(text, 1);
+          const rect = range.getBoundingClientRect();
+          return (
+            document
+              .elementFromPoint(
+                rect.x + rect.width / 2,
+                rect.y + rect.height / 2,
+              )
+              ?.closest('.ai-dim-overlay')?.dataset.shape ?? null
+          );
+        } finally {
+          overlays.forEach((overlay, index) => {
+            overlay.style.pointerEvents = previous[index];
+          });
+        }
+      });
+      assert.equal(
+        coveringOverlay,
+        focus.overlay,
+        `Slide ${focus.slide}, click ${focus.clicks}: dim overlays must cover the intended text`,
+      );
+    }
     console.log(
       `Loaded ${deck.href}; images and ${presentation.videos?.length ?? 0} videos checked.`,
     );

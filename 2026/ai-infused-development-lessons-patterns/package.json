@@ -2,9 +2,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "slidev build",
-    "start": "slidev --open",
-    "export": "slidev export",
+    "build": "slidev build session.md",
+    "start": "slidev session.md --open",
+    "export": "slidev export session.md",
     "preview": "vite preview"
   },
   "packageManager": "pnpm@12.6.0"

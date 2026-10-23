@@ -28,7 +28,7 @@ PDF export requires Chromium: `pnpm exec playwright install chromium` from the r
 
 ## What is preserved
 
-[slides.md](slides.md) defines page groups and includes the original speaker notes, labeled by source slide and click. [SLIDE_MAP.md](SLIDE_MAP.md) maps every retained original slide to its Slidev page. [build-groups.json](build-groups.json) records the same mapping as data.
+[slides.md](slides.md) defines page groups and includes presenter notes cleaned for public release, labeled by source slide and click. [SLIDE_MAP.md](SLIDE_MAP.md) maps every retained original slide to its Slidev page. [build-groups.json](build-groups.json) records the same mapping as data.
 
 Each state uses a full-slide, 1920 × 1080 image exported by **Microsoft PowerPoint on Windows**, encoded as lossless WebP. The decoded pixels were checked against every original PNG export. Text, diagrams, code, screenshots, artwork, annotations and credits therefore retain their original appearance. The original PowerPoint remains the editable source; on-slide text in this version is rasterized, rather than editable Markdown or live code.
 
