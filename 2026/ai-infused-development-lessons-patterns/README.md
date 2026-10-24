@@ -1,5 +1,7 @@
 # AI-Infused Development: Lessons Learned and Patterns from Esri Engineers
 
+[Download PDF](public/AI-1058_AI-Infused_Development_Lessons_Learned_and_Patterns_from_Esri_Engineers.pdf) · One slide per page, showing the final click state.
+
 Raul Jimenez Ortega · Sascha Brunner
 
 Esri European Developer & Technology Summit 2026

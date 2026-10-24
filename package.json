@@ -3,6 +3,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build-presentations.mjs",
+    "export:pdf": "node scripts/export-pdfs.mjs",
     "check": "node scripts/check-presentations.mjs",
     "check:links": "node scripts/check-links.mjs",
     "check:site": "node scripts/check-site.mjs",

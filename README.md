@@ -32,6 +32,27 @@ All presentations share the root dependencies and lockfile. After the root insta
 change into the session directory and run `pnpm run start`. Each deck supports
 `build`, `export`, and `preview`.
 
+## PDF downloads
+
+The published site and each session README include a PDF download. Each PDF has
+one page per visible slide, showing its final click state, without speaker notes.
+Filenames start with the session number, where provided, followed by the published
+session title with underscores instead of spaces.
+
+To regenerate all four PDFs using Slidev's native exporter:
+
+```sh
+pnpm exec playwright install chromium
+pnpm run export:pdf
+```
+
+PDFs are saved in each presentation's `public/` directory and included in the site
+build. Regenerate them after changing slides, then run `pnpm run build`. The export
+waits for slide content to load; it deliberately omits `--with-clicks` so intermediate
+click states do not become additional pages.
+The frameworks deck uses Slidev's `--per-slide` option so its Mermaid diagrams
+render at the normal slide size.
+
 Each pnpm demo has its own dependencies and lockfile. See the
 [setup guide](2026/app-development-components-frameworks/LOCAL_SETUP.md) for
 running demos, building, and browser checks.

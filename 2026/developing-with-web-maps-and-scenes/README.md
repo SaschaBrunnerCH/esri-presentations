@@ -1,5 +1,7 @@
 # ArcGIS Online: Developing with Web Maps and Web Scenes
 
+[Download PDF](public/ArcGIS_Online_Developing_with_Web_Maps_and_Web_Scenes.pdf) · One slide per page, showing the final click state.
+
 Kristian Kaesinger, Esri UK · Sascha Brunner, Esri  
 Esri European Developer & Technology Summit 2026
 

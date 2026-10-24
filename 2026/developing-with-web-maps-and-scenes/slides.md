@@ -1,6 +1,7 @@
 ---
 theme: default
 titleTemplate: '%s'
+download: './ArcGIS_Online_Developing_with_Web_Maps_and_Web_Scenes.pdf'
 title: 'ArcGIS Online: Developing with Web Maps and Web Scenes'
 author: Kristian Kaesinger, Sascha Brunner
 layout: none

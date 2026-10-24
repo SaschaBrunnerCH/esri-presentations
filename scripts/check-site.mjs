@@ -55,6 +55,19 @@ try {
       1,
       `Index must link to presenter mode for ${presentation.path}`,
     );
+    const pdfPath = `${presentation.path}/${presentation.pdf}`;
+    assert.equal(
+      await page.locator(`a[href="./${pdfPath}"][download]`).count(),
+      1,
+      `Index must offer the PDF for ${presentation.path}`,
+    );
+    const pdf = await page.request.get(new URL(pdfPath, base).href);
+    assert(pdf.ok(), `PDF must load: ${pdfPath}`);
+    assert.equal(
+      (await pdf.body()).subarray(0, 5).toString(),
+      '%PDF-',
+      `Download must contain a PDF: ${pdfPath}`,
+    );
   }
   for (const presentation of presentations) {
     const deck = new URL(`${presentation.path}/`, base);

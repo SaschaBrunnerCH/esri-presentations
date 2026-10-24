@@ -1,5 +1,7 @@
 # 3D GIS: Working with the 3D Object Layer
 
+[Download PDF](public/3D-1053_3D_GIS_Working_with_the_3D_Object_Layer.pdf) · One slide per page, showing the final click state.
+
 47 slides adapted from the Esri European Developer & Technology Summit 2026 PowerPoint, with demonstration footage from the [original Esri recording](https://mediaspace.esri.com/media/t/1_cwrea8bp).
 
 ## Run locally

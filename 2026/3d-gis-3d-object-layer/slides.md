@@ -1,5 +1,6 @@
 ---
 titleTemplate: '%s'
+download: './3D-1053_3D_GIS_Working_with_the_3D_Object_Layer.pdf'
 title: '3D GIS: Working with the 3D Object Layer'
 author: Sascha Brunner
 mdc: true

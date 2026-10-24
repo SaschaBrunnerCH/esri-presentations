@@ -1,5 +1,6 @@
 ---
 titleTemplate: '%s'
+download: './WEB-1138_ArcGIS_Maps_SDK_for_JavaScript_App_Development_with_Components_Using_Frameworks.pdf'
 title: 'ArcGIS Maps SDK for JavaScript: App Development with Components – Using Frameworks'
 author: Sascha Brunner
 duration: 45min
@@ -263,6 +264,8 @@ layout: intro
 Bundlers transform the code that is easiest for developers to write into code
 that is most performant for the browser to run.
 
+<div data-waitfor="svg">
+
 ```mermaid {scale: 0.75}
 %%{init: {'flowchart': {'nodeSpacing': 25 }}}%%
 
@@ -286,6 +289,8 @@ graph LR
 
   human_files ==> Bundler ==> optimized_output
 ```
+
+</div>
 
 <!--
 - Follow the diagram: source files + dependencies → tooling → browser output.
@@ -548,6 +553,8 @@ layout: intro
 layout: full
 ---
 
+<div data-waitfor="svg">
+
 ```mermaid
 %%{init: {'flowchart': {'wrappingWidth': 300, 'rankSpacing': 25}, 'themeCSS': '.edgeLabel, .edgeLabel span, .edgeLabel p { color: #000 !important; fill: #000 !important; }'}}%%
 graph TD
@@ -570,6 +577,8 @@ graph TD
   Toolbar -->|user state exists| Profile
   Main --> Map
 ```
+
+</div>
 
 <!--
 - Start at App and follow the branches.
@@ -618,6 +627,8 @@ pnpm run dev
 
 # React in this app
 
+<div data-waitfor="svg">
+
 ```mermaid {scale: 0.8}
 %%{init: {'flowchart': {'wrappingWidth': 300, 'rankSpacing': 25}, 'themeCSS': '.edgeLabel, .edgeLabel span, .edgeLabel p { color: #000 !important; fill: #000 !important; }'}}%%
 graph TD
@@ -638,6 +649,8 @@ graph TD
   Profile -->|arcgisPropertyChange| Handler
   Handler -->|updates App state with setDistance / setElevation| App
 ```
+
+</div>
 
 <!--
 - Trace: component event → handler → state update → rendered chips.
